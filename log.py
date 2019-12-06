@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-06 19:43:54
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-06 20:26:16
+# @Last Modified time: 2019-12-06 22:55:11
 from datetime import datetime as time 
 
 class Log():
@@ -12,7 +12,7 @@ class Log():
 
 	def log(self, message):
 		f = open(self.logFile, "a")
-		f.write(time.now().strftime("[%d/%b/%Y:%H:%M:%S] ") + message + "\r\n")
+		f.write(time.now().strftime("[%d/%b/%Y:%H:%M:%S] ") + message + "\n")
 		f.close()
 
 	def startLogging(self):
@@ -32,4 +32,4 @@ class Log():
 				f.close()
 				self.logFile = "./../files/logFile.log"
 
-			self.log((time.now().strftime("[%d/%b/%Y:%H:%M:%S] Proxy launched")))
+			self.log("Proxy launched")

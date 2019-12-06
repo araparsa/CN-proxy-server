@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-04 14:51:12
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-06 20:54:57
+# @Last Modified time: 2019-12-06 23:10:49
 
 import socket
 import signal
@@ -59,25 +59,28 @@ class ProxyServer():
 	def proxyThread(self, clientSocket, clientAddress):
 		# get the request from browser
 		incomingRequest = clientSocket.recv(2048) 
-		self.logHandler.log("Client sent request to proxy with headers:" + incomingRequest.decode("utf-8"))
+		self.logHandler.log("Client sent request to proxy with headers:")
+		self.logHandler.log("connect to [] from localhost [] 58449\n")
+		self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
+				"\n----------------------------------------------------------------------\n")
 		request = Request(incomingRequest)
 		port, webServer = request.getWebServerSocketInfo()
-		# print(request.requestLines)
 		request.prepareForWebServer()
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 		s.settimeout(10000)
 		s.connect((webServer, port))
 		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
 		s.sendall(str.encode(request.joinRequest()))
-		self.logHandler.log("Proxy sent request to server with headers:" + "<headers>")
+		self.logHandler.log("Proxy sent request to server with headers:\n" + 
+				request.joinRequest().rstrip("\r\n"))
 
 		while 1:
 			# receive data from web server
 			data = s.recv(2048)
-			self.logHandler.log("Server sent response to proxy with headers:" + "<headers>")
+			# self.logHandler.log("Server sent response to proxy with headers:" + data.decode("ascii").rstrip("\r\n"))
 			if (len(data) > 0):
 				clientSocket.send(data) # send to browser/client
-				self.logHandler.log("Proxy sent response to client with headers:" + "<headers>")
+				# self.logHandler.log("Proxy sent response to client with headers:" + data.decode("ascii").rstrip("\r\n"))
 			else:
 				break
 
