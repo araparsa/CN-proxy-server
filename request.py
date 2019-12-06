@@ -2,13 +2,13 @@
 # @Author: arman
 # @Date:   2019-12-04 17:04:52
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-04 19:25:48
+# @Last Modified time: 2019-12-06 20:56:34
 
 class Request():
 	def __init__(self, request):
 		self.requestLines = request.decode("utf-8").split('\n')  
 	
-	def getRequest(self):
+	def joinRequest(self):
 		return "\n".join(self.requestLines)
 
 	def getWebServerSocketInfo(self):
@@ -18,7 +18,7 @@ class Request():
 			temp = url
 		else:
 			temp = url[(http_pos+3):] # get the rest of url
-
+		# print(self.requestLines)
 		port_pos = temp.find(":") # find the port pos (if any)
 
 		# find end of web server
