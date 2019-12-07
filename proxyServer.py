@@ -31,6 +31,7 @@ class ProxyServer():
 		self.serverSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 		# bind the socket to local host, and a port   
+		print(self.config['port'])
 		self.serverSocket.bind((HOST_NAME, self.config['port']))
 		self.logHandler.log("Binding socket to port " + str(self.config['port']) + "...")
 		
@@ -59,6 +60,8 @@ class ProxyServer():
 	def proxyThread(self, clientSocket, clientAddress):
 		# get the request from browser
 		incomingRequest = clientSocket.recv(2048) 
+		if len(incomingRequest) == 0:
+			return
 		self.logHandler.log("Client sent request to proxy with headers:")
 		self.logHandler.log("connect to [] from localhost [] 58449\n")
 		self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
