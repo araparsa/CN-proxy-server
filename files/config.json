@@ -1,0 +1,42 @@
+{
+  "port": 8080,
+
+  "logging": {
+    "enable": true,
+    "logFile": ""
+  	},
+
+  "caching": {
+    "enable": true,
+    "size": 200
+  	},
+
+ 	"privacy": {
+    "enable": true,
+    "userAgent": "CN Proxy Server (v1.0.0)"
+  	},
+  
+	"accounting":{
+		"users":[
+			{
+				"IP": "127.0.0.1",
+				"volume":"80000000" 
+			}
+		]
+	},
+	
+	"restriction": {
+    "enable": true,
+    	"targets": [
+      	{
+        	"URL": "sib.ir",
+        	"type": "BLOCK"
+     	  },
+     	  {
+        	"URL": "acm.ut.ac.ir",
+        	"type": "SLOW",
+        	"delay": "1000"
+      	}
+   		]
+  	}
+}
