@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-04 17:04:52
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 17:27:12
+# @Last Modified time: 2019-12-09 18:09:27
 from parsers.httpParser import HttpParser 
 
 class RequestHandler:
@@ -39,7 +39,7 @@ class RequestHandler:
 		return port, webserver 
 
 	def prepareForWebServer(request):
-		print(request)
+		# print(request)
 		request = HttpParser.changeHttpVersion(request)
 		# print(request)
 		request = HttpParser.removeHttpFromMessage(request)

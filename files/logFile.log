@@ -1,119 +1,32 @@
-[09/Dec/2019:17:40:31] Proxy launched
-[09/Dec/2019:17:40:31] Creating server socket...
-[09/Dec/2019:17:40:31] Binding socket to port 8080...
-[09/Dec/2019:17:40:31] Listening for incoming requests...
+[09/Dec/2019:19:43:48] Proxy launched
+[09/Dec/2019:19:43:48] Creating server socket...
+[09/Dec/2019:19:43:48] Binding socket to port 8080...
+[09/Dec/2019:19:43:48] Listening for incoming requests...
 
-[09/Dec/2019:17:40:32] Accepted a request from client!
-[09/Dec/2019:17:40:32] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:32] connect to [] from localhost [] 58449
+[09/Dec/2019:19:43:49] Accepted a request from client!
+[09/Dec/2019:19:43:49] Accepted a request from client!
+[09/Dec/2019:19:43:49] Accepted a request from client!
+[09/Dec/2019:19:43:49] Client sent request to proxy with headers:
+[09/Dec/2019:19:43:49] Client sent request to proxy with headers:
+[09/Dec/2019:19:43:49] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:32] 
+[09/Dec/2019:19:43:49] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:43:49] 
 ----------------------------------------------------------------------
-CONNECT accounts.google.com:443 HTTP/1.1
-Host: accounts.google.com:443
+GET http://sib.ir/public/sib.ir HTTP/1.1
+Host: sib.ir
 Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Im5lazZla0x1bXRhUDdaR00rSTMyV0E9PSIsInZhbHVlIjoic2RBR1Y2enBLWVd5OG9tWE12UnJzVFl2WEZ5am50V3lKUldrN2QwYU4zeEJRTlhOMjc5ZE5WZmdxNldtVGRvcSIsIm1hYyI6IjRkYzVkMjk0NzI1ZDhlYjU2MDkyOTFhNTMxMWFjOWRkNjBlNTlkNDY2ODI3OWVlZmI3YWFkMzkxMjNiMzE1ZGIifQ%3D%3D; laravel_session=eyJpdiI6ImpxVE9xYU1aYkJDWmdsaEV2K1hTRGc9PSIsInZhbHVlIjoiZUdRQkNpMUQxKzV0Z2tNTG9Xa1FcLzNjcGJMR1pBQXJvaHVheldNVXpzeUVHc0sxb1I0aTFNUkJBXC9ya0t5SlZ3
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:33] Proxy opening connection to server accounts.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:33] Accepted a request from client!
-[09/Dec/2019:17:40:33] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:33] Accepted a request from client!
-[09/Dec/2019:17:40:33] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:33] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:33] 
-----------------------------------------------------------------------
-CONNECT www.google.com:443 HTTP/1.1
-Host: www.google.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:33] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:33] 
-----------------------------------------------------------------------
-CONNECT www.google.com:443 HTTP/1.1
-Host: www.google.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:33] Accepted a request from client!
-[09/Dec/2019:17:40:33] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:33] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:33] 
-----------------------------------------------------------------------
-CONNECT lh5.googleusercontent.com:443 HTTP/1.1
-Host: lh5.googleusercontent.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:33] Proxy opening connection to server lh5.googleusercontent.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:33] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:33] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:33] Accepted a request from client!
-[09/Dec/2019:17:40:33] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:33] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:33] 
-----------------------------------------------------------------------
-CONNECT www.google.com:443 HTTP/1.1
-Host: www.google.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:33] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:35] Accepted a request from client!
-[09/Dec/2019:17:40:35] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:35] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:35] 
-----------------------------------------------------------------------
-CONNECT www.google.com:443 HTTP/1.1
-Host: www.google.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:36] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:36] 
-----------------------------------------------------------------------
-CONNECT clients2.google.com:443 HTTP/1.1
-Host: clients2.google.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:36] Proxy opening connection to server clients2.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:36] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:36] 
-----------------------------------------------------------------------
-CONNECT www.google.com:443 HTTP/1.1
-Host: www.google.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:36] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:36] 
+[09/Dec/2019:19:43:49] 
 ----------------------------------------------------------------------
 CONNECT fonts.googleapis.com:443 HTTP/1.1
 Host: fonts.googleapis.com:443
@@ -121,11 +34,27 @@ Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:36] connect to [] from localhost [] 58449
+[09/Dec/2019:19:43:50] Proxy opening connection to server fonts.googleapis.com[ip-address]... Connection opened.
+[09/Dec/2019:19:43:50] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: fonts.googleapis.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:43:51] Proxy opening connection to server sib.ir[ip-address]... Connection opened.
+[09/Dec/2019:19:43:51] Proxy sent request to server with headers:
+GET /public/sib.ir HTTP/1.0
+Host: sib.ir
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Im5lazZla0x1bXRhUDdaR00rSTMyV0E9PSIsInZhbHVlIjoic2RBR1Y2enBLWVd5OG9tWE12UnJzVFl2WEZ5am50V3lKUldrN2QwYU4zeEJRTlhOMjc5ZE5WZmdxNldtVGRvcSIsIm1hYyI6IjRkYzVkMjk0NzI1ZDhlYjU2MDkyOTFhNTMxMWFjOWRkNjBlNTlkNDY2ODI3OWVlZmI3YWFkMzkxMjNiMzE1ZGIifQ%3D%3D; laravel_session=eyJpdiI6ImpxVE9xYU1aYkJDWmdsaEV2K1hTRGc9PSIsInZhbHVlIjoiZUdRQkNpMUQxKzV0Z2tNTG9Xa1FcLzNjcGJMR1pBQXJvaHVheldNVXpzeUVHc0sxb1I0aTFNUkJBXC9ya0t5SlZ3
+[09/Dec/2019:19:43:58] Accepted a request from client!
+[09/Dec/2019:19:43:58] Client sent request to proxy with headers:
+[09/Dec/2019:19:43:58] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:36] 
+[09/Dec/2019:19:43:58] 
 ----------------------------------------------------------------------
 CONNECT www.google.com:443 HTTP/1.1
 Host: www.google.com:443
@@ -133,10 +62,54 @@ Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:36] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:36] connect to [] from localhost [] 58449
+[09/Dec/2019:19:43:58] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:43:58] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:43:59] Client sent request to proxy with headers:
+[09/Dec/2019:19:43:59] Accepted a request from client!
+[09/Dec/2019:19:43:59] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:36] 
+[09/Dec/2019:19:43:59] 
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:43:59] Client sent request to proxy with headers:
+[09/Dec/2019:19:43:59] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:43:59] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:43:59] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:43:59] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:00] Accepted a request from client!
+[09/Dec/2019:19:44:00] Accepted a request from client!
+[09/Dec/2019:19:44:00] Accepted a request from client!
+[09/Dec/2019:19:44:00] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:00] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:00] 
+----------------------------------------------------------------------
+CONNECT fonts.googleapis.com:443 HTTP/1.1
+Host: fonts.googleapis.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:00] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:00] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:00] 
 ----------------------------------------------------------------------
 GET http://sib.ir/public/sib.ir HTTP/1.1
 Host: sib.ir
@@ -144,79 +117,468 @@ Proxy-Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Purpose: prefetch
 Accept-Encoding: gzip, deflate
 Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
-Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Ik1kdXdoUko1TmtDXC9kMlpiSlI5U1VnPT0iLCJ2YWx1ZSI6IlYyN1l4MEx4V2RyZlNrUFhja0FHNzlLOXM4KzlZcXhibFNpRXRuV3lHelVEdlpiUGV6aE93bEJnMjZUQTR2UDkiLCJtYWMiOiI4ZWQ4NWVlZmRmMWIxNzRhNzc3NjMzZGY4ZjM0OTIzM2JjZTBkZjQxM2VmMDUxZTllNWQ5MTQ3MjcyNGFlNTdiIn0%3D; laravel_session=eyJpdiI6ImRmeU9FY2lIQytGMHZVXC91RWxVOUd3PT0iLCJ2YWx1ZSI6IlNiY3V6cWI0SjZJbXFtQlNoYlNrR2dIT3Z4TlpPY1BcL2hGaDFjakhcLzBpUHV5T0tHYVJqdGZ1bzI2VFR1SjVyTCIsIm1hYyI6ImU5NzZjNzYzNjQ2NGVkYWVjYzU2YjhjZWIzMDdiYWEwY2RjMjJlMTk0ZWQ0Y2I1MGY4NDQ2NzYzMDVhMzk4NmEifQ%3D%3D
+Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Im5lazZla0x1bXRhUDdaR00rSTMyV0E9PSIsInZhbHVlIjoic2RBR1Y2enBLWVd5OG9tWE12UnJzVFl2WEZ5am50V3lKUldrN2QwYU4zeEJRTlhOMjc5ZE5WZmdxNldtVGRvcSIsIm1hYyI6IjRkYzVkMjk0NzI1ZDhlYjU2MDkyOTFhNTMxMWFjOWRkNjBlNTlkNDY2ODI3OWVlZmI3YWFkMzkxMjNiMzE1ZGIifQ%3D%3D; laravel_session=eyJpdiI6ImpxVE9xYU1aYkJDWmdsaEV2K1hTRGc9PSIsInZhbHVlIjoiZUdRQkNpMUQxKzV0Z2tNTG9Xa1FcLzNjcGJMR1pBQXJvaHVheldNVXpzeUVHc0sxb1I0aTFNUkJBXC9ya0t5SlZ3IiwibWFjIjoiMjk4NjEyZjc3OD
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:36] Proxy opening connection to server fonts.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:36] Proxy opening connection to server sib.ir[ip-address]... Connection opened.
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:36] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:36] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:36] 
-----------------------------------------------------------------------
-CONNECT fonts.googleapis.com:443 HTTP/1.1
+[09/Dec/2019:19:44:00] Proxy opening connection to server fonts.googleapis.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:00] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
 Host: fonts.googleapis.com:443
-Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:36] Accepted a request from client!
-[09/Dec/2019:17:40:37] Accepted a request from client!
-[09/Dec/2019:17:40:37] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:37] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:37] 
-----------------------------------------------------------------------
-CONNECT fonts.googleapis.com:443 HTTP/1.1
-Host: fonts.googleapis.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:37] Proxy opening connection to server fonts.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:37] Proxy opening connection to server fonts.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:37] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:37] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:37] 
-----------------------------------------------------------------------
-GET http://sib.ir/favicon.ico HTTP/1.1
+[09/Dec/2019:19:44:00] Proxy opening connection to server sib.ir[ip-address]... Connection opened.
+[09/Dec/2019:19:44:00] Proxy sent request to server with headers:
+GET /public/sib.ir HTTP/1.0
 Host: sib.ir
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Im5lazZla0x1bXRhUDdaR00rSTMyV0E9PSIsInZhbHVlIjoic2RBR1Y2enBLWVd5OG9tWE12UnJzVFl2WEZ5am50V3lKUldrN2QwYU4zeEJRTlhOMjc5ZE5WZmdxNldtVGRvcSIsIm1hYyI6IjRkYzVkMjk0NzI1ZDhlYjU2MDkyOTFhNTMxMWFjOWRkNjBlNTlkNDY2ODI3OWVlZmI3YWFkMzkxMjNiMzE1ZGIifQ%3D%3D; laravel_session=eyJpdiI6ImpxVE9xYU1aYkJDWmdsaEV2K1hTRGc9PSIsInZhbHVlIjoiZUdRQkNpMUQxKzV0Z2tNTG9Xa1FcLzNjcGJMR1pBQXJvaHVheldNVXpzeUVHc0sxb1I0aTFNUkJBXC9ya0t5SlZ3IiwibWFjIjoiMjk4NjEyZjc3OD
+[09/Dec/2019:19:44:05] Accepted a request from client!
+[09/Dec/2019:19:44:05] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:05] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:05] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:05] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:05] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:09] Accepted a request from client!
+[09/Dec/2019:19:44:09] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:09] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:09] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:09] Accepted a request from client!
+[09/Dec/2019:19:44:09] Accepted a request from client!
+[09/Dec/2019:19:44:09] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:09] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:09] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:09] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:09] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:09] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:09] Accepted a request from client!
+[09/Dec/2019:19:44:09] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:09] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:09] 
+----------------------------------------------------------------------
+CONNECT lh5.googleusercontent.com:443 HTTP/1.1
+Host: lh5.googleusercontent.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:09] Proxy opening connection to server lh5.googleusercontent.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:09] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: lh5.googleusercontent.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:10] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:10] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:10] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:10] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:10] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:10] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:10] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:10] Accepted a request from client!
+[09/Dec/2019:19:44:10] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:10] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:10] 
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:10] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:10] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:10] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:10] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:15] Accepted a request from client!
+[09/Dec/2019:19:44:15] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:15] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:15] 
+----------------------------------------------------------------------
+GET http://sib.ir/public/sib.ir HTTP/1.1
+Host: sib.ir
+Proxy-Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Im5lazZla0x1bXRhUDdaR00rSTMyV0E9PSIsInZhbHVlIjoic2RBR1Y2enBLWVd5OG9tWE12UnJzVFl2WEZ5am50V3lKUldrN2QwYU4zeEJRTlhOMjc5ZE5WZmdxNldtVGRvcSIsIm1hYyI6IjRkYzVkMjk0NzI1ZDhlYjU2MDkyOTFhNTMxMWFjOWRkNjBlNTlkNDY2ODI3OWVlZmI3YWFkMzkxMjNiMzE1ZGIifQ%3D%3D; laravel_session=eyJpdiI6ImpxVE9xYU1aYkJDWmdsaEV2K1hTRGc9PSIsInZhbHVlIjoiZUdRQkNpMUQxKzV0Z2tNTG9Xa1FcLzNjcGJMR1pBQXJvaHVheldNVXpzeUVHc0sxb1I0aTFNUkJBXC9ya0t5SlZ3IiwibWFjIjoiMjk4NjEyZjc3OD
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:15] Proxy opening connection to server sib.ir[ip-address]... Connection opened.
+[09/Dec/2019:19:44:15] Proxy sent request to server with headers:
+GET /public/sib.ir HTTP/1.0
+Host: sib.ir
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6Im5lazZla0x1bXRhUDdaR00rSTMyV0E9PSIsInZhbHVlIjoic2RBR1Y2enBLWVd5OG9tWE12UnJzVFl2WEZ5am50V3lKUldrN2QwYU4zeEJRTlhOMjc5ZE5WZmdxNldtVGRvcSIsIm1hYyI6IjRkYzVkMjk0NzI1ZDhlYjU2MDkyOTFhNTMxMWFjOWRkNjBlNTlkNDY2ODI3OWVlZmI3YWFkMzkxMjNiMzE1ZGIifQ%3D%3D; laravel_session=eyJpdiI6ImpxVE9xYU1aYkJDWmdsaEV2K1hTRGc9PSIsInZhbHVlIjoiZUdRQkNpMUQxKzV0Z2tNTG9Xa1FcLzNjcGJMR1pBQXJvaHVheldNVXpzeUVHc0sxb1I0aTFNUkJBXC9ya0t5SlZ3IiwibWFjIjoiMjk4NjEyZjc3OD
+[09/Dec/2019:19:44:20] Accepted a request from client!
+[09/Dec/2019:19:44:20] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:20] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:20] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:20] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:20] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:21] Accepted a request from client!
+[09/Dec/2019:19:44:21] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:21] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:21] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:22] Accepted a request from client!
+[09/Dec/2019:19:44:22] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:22] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:22] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:22] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:22] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:22] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:22] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:22] Accepted a request from client!
+[09/Dec/2019:19:44:22] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:22] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:22] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:22] Accepted a request from client!
+[09/Dec/2019:19:44:22] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:22] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:22] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:22] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:22] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:22] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:22] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:22] Accepted a request from client!
+[09/Dec/2019:19:44:23] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:23] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:23] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:23] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:23] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:23] Accepted a request from client!
+[09/Dec/2019:19:44:23] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:23] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:23] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:23] Accepted a request from client!
+[09/Dec/2019:19:44:23] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:23] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:23] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:23] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:23] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:23] Accepted a request from client!
+[09/Dec/2019:19:44:23] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:23] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:23] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:23] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:23] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:24] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:24] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:24] Accepted a request from client!
+[09/Dec/2019:19:44:24] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:24] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:24] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:24] Accepted a request from client!
+[09/Dec/2019:19:44:24] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:24] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:24] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:24] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:24] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:25] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:25] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:25] Accepted a request from client!
+[09/Dec/2019:19:44:25] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:25] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:25] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:25] Accepted a request from client!
+[09/Dec/2019:19:44:25] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:25] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:25] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:25] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:25] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:25] Accepted a request from client!
+[09/Dec/2019:19:44:25] Accepted a request from client!
+[09/Dec/2019:19:44:25] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:25] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:25] 
+----------------------------------------------------------------------
+GET http://mydiba.xyz/ HTTP/1.1
+Host: mydiba.xyz
+Proxy-Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:25] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:25] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:25] Proxy opening connection to server mydiba.xyz[ip-address]... Connection opened.
+[09/Dec/2019:19:44:25] Proxy sent request to server with headers:
+GET / HTTP/1.0
+Host: mydiba.xyz
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+[09/Dec/2019:19:44:25] Server sent response to proxy with headers:
+HTTP/1.1 403 Forbidden
+Connection: close
+[09/Dec/2019:19:44:25] Proxy sent response to client with headers:
+HTTP/1.1 403 Forbidden
+Connection: close
+[09/Dec/2019:19:44:25] Accepted a request from client!
+[09/Dec/2019:19:44:25] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:25] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:25] 
+----------------------------------------------------------------------
+CONNECT clients1.google.com:443 HTTP/1.1
+Host: clients1.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:25] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:25] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:25] 
+----------------------------------------------------------------------
+GET http://mydiba.xyz/favicon.ico HTTP/1.1
+Host: mydiba.xyz
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 Accept: image/webp,image/apng,image/*,*/*;q=0.8
-Referer: http://sib.ir/public/sib.ir
+Referer: http://mydiba.xyz/
 Accept-Encoding: gzip, deflate
 Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
-Cookie: __cfduid=d154982eae5d7422d32d9ca35a9932d771575475511; _ga=GA1.2.485340698.1575644434; _gid=GA1.2.1169310509.1575831140; XSRF-TOKEN=eyJpdiI6ImU2OWxXOTRRV054K1NHd3F5THFaUGc9PSIsInZhbHVlIjoiN0dBTTA2SlJwN2hJTVwvUURiUHpEc1ZVNnc2RjU2bXJCUU8wbDZGWXU3OG1DQnVlbEE5RkhjZ3RZVmR1eTR2dHgiLCJtYWMiOiI4ZTY4M2YzZWEwMTZjYWExZTA2OTM4OTA4YjNlNTNlMDhkYWU0ODcxZTZkN2M4ZmVjYmRhZDQwNDRhM2MwNDYxIn0%3D; laravel_session=eyJpdiI6Ims3MTBuYWZqWUJoZnphVXNpanhMY2c9PSIsInZhbHVlIjoiZHpmeFVyVzFRM3pWXC96S0tMZTRCaitzWnNHdllsMHFXWTdhRVZiMktsblwvZmZwY00xNWtzc2VTWlA5alNGRlZ6IiwibWFjIjoiYzRkZTMxZDQ2OTU2Y2Q2NmUwM2Y2MTdiMzgyNTBhMTQ3MzZhMDBkMTQ5ODhkZjM5NDgwYTI4MTMzNmEwMDZlMyJ9
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:37] Proxy opening connection to server sib.ir[ip-address]... Connection opened.
-[09/Dec/2019:17:40:37] Accepted a request from client!
-[09/Dec/2019:17:40:37] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:37] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:37] 
-----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
-Proxy-Connection: keep-alive
+[09/Dec/2019:19:44:25] Proxy opening connection to server clients1.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:25] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: clients1.google.com:443
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
+[09/Dec/2019:19:44:25] Proxy opening connection to server mydiba.xyz[ip-address]... Connection opened.
+[09/Dec/2019:19:44:25] Proxy sent request to server with headers:
+GET /favicon.ico HTTP/1.0
+Host: mydiba.xyz
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://mydiba.xyz/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+[09/Dec/2019:19:44:25] Server sent response to proxy with headers:
+HTTP/1.1 403 Forbidden
+Connection: close
+[09/Dec/2019:19:44:25] Proxy sent response to client with headers:
+HTTP/1.1 403 Forbidden
+Connection: close
+[09/Dec/2019:19:44:29] Accepted a request from client!
+[09/Dec/2019:19:44:29] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:29] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:37] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:38] Accepted a request from client!
-[09/Dec/2019:17:40:38] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:38] Accepted a request from client!
-[09/Dec/2019:17:40:38] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:38] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:38] 
+[09/Dec/2019:19:44:29] 
 ----------------------------------------------------------------------
 CONNECT www.google.com:443 HTTP/1.1
 Host: www.google.com:443
@@ -224,61 +586,16 @@ Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:38] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:38] 
-----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
-Proxy-Connection: keep-alive
+[09/Dec/2019:19:44:29] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:29] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
+[09/Dec/2019:19:44:35] Accepted a request from client!
+[09/Dec/2019:19:44:35] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:35] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:39] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:39] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:39] Accepted a request from client!
-[09/Dec/2019:17:40:39] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:39] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:39] 
-----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:39] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:39] Accepted a request from client!
-[09/Dec/2019:17:40:39] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:39] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:39] 
-----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:39] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:43] Accepted a request from client!
-[09/Dec/2019:17:40:43] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:43] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:43] 
-----------------------------------------------------------------------
-CONNECT mtalk.google.com:443 HTTP/1.1
-Host: mtalk.google.com:443
-Proxy-Connection: keep-alive
-----------------------------------------------------------------------
-
-[09/Dec/2019:17:40:43] Proxy opening connection to server mtalk.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:44] Accepted a request from client!
-[09/Dec/2019:17:40:44] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:44] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:44] 
+[09/Dec/2019:19:44:35] 
 ----------------------------------------------------------------------
 CONNECT www.google.com:443 HTTP/1.1
 Host: www.google.com:443
@@ -286,12 +603,16 @@ Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:44] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:46] Accepted a request from client!
-[09/Dec/2019:17:40:46] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:46] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:35] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:35] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:46] 
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
 CONNECT www.google.com:443 HTTP/1.1
 Host: www.google.com:443
@@ -299,12 +620,15 @@ Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:46] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:50] Accepted a request from client!
-[09/Dec/2019:17:40:50] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:50] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:50] 
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
 CONNECT www.google.com:443 HTTP/1.1
 Host: www.google.com:443
@@ -312,95 +636,316 @@ Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:50] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:52] Accepted a request from client!
-[09/Dec/2019:17:40:52] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:52] connect to [] from localhost [] 58449
-
-[09/Dec/2019:17:40:52] 
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
-CONNECT clients2.google.com:443 HTTP/1.1
-Host: clients2.google.com:443
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:52] Proxy opening connection to server clients2.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:55] Accepted a request from client!
-[09/Dec/2019:17:40:55] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:55] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:55] 
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
+CONNECT lh5.googleusercontent.com:443 HTTP/1.1
+Host: lh5.googleusercontent.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:55] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:56] Accepted a request from client!
-[09/Dec/2019:17:40:56] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:56] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:36] Proxy opening connection to server lh5.googleusercontent.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:36] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: lh5.googleusercontent.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:36] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:36] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:36] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:56] 
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:56] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:40:57] Accepted a request from client!
-[09/Dec/2019:17:40:57] Client sent request to proxy with headers:
-[09/Dec/2019:17:40:57] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:40:57] 
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
-CONNECT accounts.google.com:443 HTTP/1.1
-Host: accounts.google.com:443
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:40:57] Proxy opening connection to server accounts.google.com[ip-address]... Connection opened.
-[09/Dec/2019:17:41:10] Accepted a request from client!
-[09/Dec/2019:17:41:10] Client sent request to proxy with headers:
-[09/Dec/2019:17:41:10] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:36] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:36] Accepted a request from client!
+[09/Dec/2019:19:44:36] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:36] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:41:10] 
+[09/Dec/2019:19:44:36] 
 ----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:41:10] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:41:15] Accepted a request from client!
-[09/Dec/2019:17:41:15] Client sent request to proxy with headers:
-[09/Dec/2019:17:41:15] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:36] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:36] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:37] Accepted a request from client!
+[09/Dec/2019:19:44:37] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:37] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:41:15] 
+[09/Dec/2019:19:44:37] 
 ----------------------------------------------------------------------
-CONNECT www.googleapis.com:443 HTTP/1.1
-Host: www.googleapis.com:443
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:41:16] Proxy opening connection to server www.googleapis.com[ip-address]... Connection opened.
-[09/Dec/2019:17:41:24] Accepted a request from client!
-[09/Dec/2019:17:41:24] Client sent request to proxy with headers:
-[09/Dec/2019:17:41:24] connect to [] from localhost [] 58449
+[09/Dec/2019:19:44:37] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:37] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:37] Accepted a request from client!
+[09/Dec/2019:19:44:37] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:37] connect to [] from localhost [] 58449
 
-[09/Dec/2019:17:41:24] 
+[09/Dec/2019:19:44:37] 
 ----------------------------------------------------------------------
-CONNECT clients2.google.com:443 HTTP/1.1
-Host: clients2.google.com:443
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
 Proxy-Connection: keep-alive
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
 ----------------------------------------------------------------------
 
-[09/Dec/2019:17:41:24] Proxy opening connection to server clients2.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:37] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:37] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:37] Accepted a request from client!
+[09/Dec/2019:19:44:37] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:37] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:37] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:37] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:37] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:38] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:38] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:38] Accepted a request from client!
+[09/Dec/2019:19:44:38] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:38] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:38] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:38] Accepted a request from client!
+[09/Dec/2019:19:44:38] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:38] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:38] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:38] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:38] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:38] Accepted a request from client!
+[09/Dec/2019:19:44:38] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:38] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:38] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:38] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:38] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:38] Accepted a request from client!
+[09/Dec/2019:19:44:38] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:38] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:38] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:39] Accepted a request from client!
+[09/Dec/2019:19:44:39] Accepted a request from client!
+[09/Dec/2019:19:44:39] Accepted a request from client!
+[09/Dec/2019:19:44:39] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:39] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:39] 
+----------------------------------------------------------------------
+CONNECT resaa.net:443 HTTP/1.1
+Host: resaa.net:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:39] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:39] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:39] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:39] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:39] Proxy opening connection to server resaa.net[ip-address]... Connection opened.
+[09/Dec/2019:19:44:39] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: resaa.net:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:45] Accepted a request from client!
+[09/Dec/2019:19:44:45] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:45] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:45] 
+----------------------------------------------------------------------
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:45] Proxy opening connection to server www.google.com[ip-address]... Connection opened.
+[09/Dec/2019:19:44:45] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:45] Accepted a request from client!
+[09/Dec/2019:19:44:45] Accepted a request from client!
+[09/Dec/2019:19:44:45] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:45] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:45] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:45] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:45] 
+----------------------------------------------------------------------
+CONNECT resaa.net:443 HTTP/1.1
+Host: resaa.net:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:45] 
+----------------------------------------------------------------------
+CONNECT resaa.net:443 HTTP/1.1
+Host: resaa.net:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:45] Proxy opening connection to server resaa.net[ip-address]... Connection opened.
+[09/Dec/2019:19:44:45] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: resaa.net:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:45] Proxy opening connection to server resaa.net[ip-address]... Connection opened.
+[09/Dec/2019:19:44:45] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: resaa.net:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+[09/Dec/2019:19:44:50] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:50] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:50] Accepted a request from client!
+[09/Dec/2019:19:44:50] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:50] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:50] Client sent request to proxy with headers:
+[09/Dec/2019:19:44:50] 
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:50] 
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:50] connect to [] from localhost [] 58449
+
+[09/Dec/2019:19:44:50] 
+----------------------------------------------------------------------
+CONNECT resaa.net:443 HTTP/1.1
+Host: resaa.net:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+----------------------------------------------------------------------
+
+[09/Dec/2019:19:44:50] Proxy opening connection to server resaa.net[ip-address]... Connection opened.
+[09/Dec/2019:19:44:50] Proxy sent request to server with headers:
+CONNECT / HTTP/1.0
+Host: resaa.net:443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36

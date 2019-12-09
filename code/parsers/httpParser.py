@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-09 13:49:10
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 17:26:27
+# @Last Modified time: 2019-12-09 19:35:15
 
 class HttpParser:
 	"""docstring for HttpParser"""
@@ -31,7 +31,10 @@ class HttpParser:
 
 	def getUrl(message):
 		messageLines = HttpParser.decode(message)
-		return (messageLines[0].split(" ")[1]) #get url 
+		try:
+			return (messageLines[0].split(" ")[1]) #get url 
+		except:
+			pass
 
 	def getContent(message):
 		url = HttpParser.getUrl(message)
@@ -47,9 +50,6 @@ class HttpParser:
 	def replaceUrl(message):
 		url = HttpParser.getUrl(message)
 		content = HttpParser.getContent(message)
-		print(message)
-		print("url " + url)
-		print("\ncontent " + content)
 		messageLines = HttpParser.decode(message)
 		messageLines[0] = messageLines[0].replace(url, content)
 		return (HttpParser.encode(messageLines))
@@ -61,3 +61,17 @@ class HttpParser:
 				del messageLines[i]
 				break
 		return (HttpParser.encode(messageLines))
+
+	def getHeader(message):
+		rByte = b'\r'[0]
+		nByte = b'\n'[0]
+		for i in range(len(message)):
+			if i<=len(message) - 4 and message[i]==rByte and message[i+1]==nByte and message[i+2]==rByte and message[i+3]==nByte:
+				return message[:i+2] 
+
+	def noCache(message):
+		messageLines = HttpParser.decode(message)
+		for line in messageLines:
+			if "Pragma: no-cache" in line:
+				return True
+		return False

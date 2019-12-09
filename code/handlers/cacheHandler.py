@@ -2,14 +2,15 @@
 # @Author: arman
 # @Date:   2019-12-08 22:25:52
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 14:14:04
+# @Last Modified time: 2019-12-09 19:30:17
 
 import os 
 # from logHandler import LogHandler
+from parsers.httpParser import HttpParser
 
 PATH = "./../cache/"
 _TIME = 0
-_CONTENT = 1
+_KEY = 1
 _RESPONSE = 2
 
 class CacheHandler():
@@ -30,31 +31,33 @@ class CacheHandler():
 		for item in self.cache:
 			item[_TIME] += 1
 
-	def saveContent(self, content, response):	
+	def saveMessage(self, key, message):	
 		self.timerUp()
-		self.cache.append((0, content, response))
+		self.cache.append([0, key, message])
 
-	def LRUReplace(self, content, response):
+	def LRUReplace(self, cKey, message):
 		lru = max(self.cache, key = lambda x: x[0])
 		for item in self.cache:
 			if (item[_TIME] == lru):
 				self.cache.remove(item)
-		self.saveContent(lru, response)
+		self.saveMessage(cKey, message)
 
-	def handleResponseCache(self, content, response):
-		if(not self.cacheEnable):
+	def saveInCache(self, key, message, noCache):
+		
+		if (noCache):
 			return 
-		if (self.noCache(response)):
+		if(not self.cacheEnable):
 			return 
 
 		if (len(self.cache) < 200):
-			self.saveContent(response)
+			self.saveMessage(key, message)
 		else:
-			self.LRUReplace(response)
+			self.LRUReplace(key, message)
+		print(len(self.cache))
 
 	def hit(content):
 		for item in self.cache:
-			if(item[_CONTENT] == content):
+			if(item[_KEY] == content):
 				item[_TIME] = 0 
 		self.timerUp()
 
