@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-08 22:25:52
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 14:14:04
+# @Last Modified time: 2019-12-09 13:37:49
 
 import os 
 # from logHandler import LogHandler
@@ -19,10 +19,11 @@ class CacheHandler():
 		self.cache = cache
 
 	def setParams(self, config):
+		cacheConfig = config["caching"]
 		self.cacheEnable = False
-		if (config["enable"]):
+		if (cacheConfig["enable"]):
 			self.cacheEnable = True
-		self.cacheSize = config["size"]
+		self.cacheSize = cacheConfig["size"]
 
 	# def noCache(self, response):
 

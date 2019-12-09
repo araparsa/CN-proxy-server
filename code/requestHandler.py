@@ -2,8 +2,9 @@
 # @Author: arman
 # @Date:   2019-12-04 17:04:52
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 17:27:12
-from parsers.httpParser import HttpParser 
+# @Last Modified time: 2019-12-09 15:25:48
+
+from parsers.httpParser import HttpParser
 
 class RequestHandler:
 	# def __init__(self, request):
@@ -39,15 +40,10 @@ class RequestHandler:
 		return port, webserver 
 
 	def prepareForWebServer(request):
-		print(request)
-		request = HttpParser.changeHttpVersion(request)
-		# print(request)
-		request = HttpParser.removeHttpFromMessage(request)
-		# print(request)
-		# url = HttpParser.getUrl(request)
-		# content = HttpParser.getContent(request)
-		request = HttpParser.replaceUrl(request)
-		# print(request)
-		request = HttpParser.removeProxyHeader(request)
-		# print(request)
-		return request 
+		HttpParser.changeHttpVersion(request)
+		HttpParser.removeHttpFromMessage(request)
+		# url = httpParser.getUrl()
+		# content = self.getContent(url)
+		HttpParser.replaceUrl(request)
+		HttpParser.removeProxyHeader(request)
+		

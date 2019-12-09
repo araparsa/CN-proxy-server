@@ -2,14 +2,15 @@
 # @Author: arman
 # @Date:   2019-12-04 14:51:12
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-08 22:23:32
+# @Last Modified time: 2019-12-09 17:17:14
 
 import socket
 import signal
 import json 
 import threading 
-from requestHandler import RequestHandler
-from logHandler import LogHandler 
+from handlers.requestHandler import RequestHandler
+from handlers.logHandler import LogHandler 
+from handlers.cacheHandler import CacheHandler 
 
 CONFIG_FILE = "./../files/config.json"
 HOST_NAME = "0.0.0.0"
@@ -19,8 +20,9 @@ class ProxyServer():
 	
 	def __init__(self):
 		self.parseConfigFile()
-		self.logHandler = LogHandler(self.config)
-		self.logHandler.startLogging()
+		self.logHandler = LogHandler(self.config["logging"])
+		self.cache = []
+		self.cacheHandler = CacheHandler(self.config["caching"], self.cache)
 		signal.signal(signal.SIGINT, self.shutdown)
 		
 		#Create a TCP socket
@@ -56,27 +58,15 @@ class ProxyServer():
 							target = self.proxyThread, args=(clientSocket, clientAddress))
 			d.setDaemon(True)
 			d.start()
-		
-	def proxyThread(self, clientSocket, clientAddress):
-		# get the request from browser
-		incomingRequest = clientSocket.recv(2048) 
-		if len(incomingRequest) == 0:
-			return
-		self.logHandler.log("Client sent request to proxy with headers:")
-		self.logHandler.log("connect to [] from localhost [] 58449\n")
-		self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
-				"\n----------------------------------------------------------------------\n")
-		request = RequestHandler(incomingRequest)
-		port, webServer = request.getWebServerSocketInfo()
-		request.prepareForWebServer()
+	
+	def sendReqToWebServer(self, request, clientSocket):
+		port, webServer = RequestHandler.getWebServerSocketInfo(request)
+		reqForWebServer = RequestHandler.prepareForWebServer(request)
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-		s.settimeout(10000)
+		s.settimeout(1000)
 		s.connect((webServer, port))
 		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
-		s.sendall(str.encode(request.joinRequest()))
-		self.logHandler.log("Proxy sent request to server with headers:\n" + 
-				request.joinRequest().rstrip("\r\n"))
-
+		s.sendall(reqForWebServer)
 		while 1:
 			# receive data from web server
 			data = s.recv(2048)
@@ -86,6 +76,40 @@ class ProxyServer():
 				# self.logHandler.log("Proxy sent response to client with headers:" + data.decode("ascii").rstrip("\r\n"))
 			else:
 				break
+
+	
+	def proxyThread(self, clientSocket, clientAddress):
+		# get the request from browser
+		incomingRequest = clientSocket.recv(2048) 
+		if len(incomingRequest) == 0:
+			return
+		self.logHandler.log("Client sent request to proxy with headers:")
+		self.logHandler.log("connect to [] from localhost [] 58449\n")
+		self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
+				"\n----------------------------------------------------------------------\n")
+		# request = RequestHandler(incomingRequest)
+		
+		# self.logHandler.log("Proxy sent request to server with headers:\n" + 
+		# 		request.joinRequest().rstrip("\r\n"))
+
+		# self.sendReqToWebServer(incomingRequest, clientSocket)
+		port, webServer = RequestHandler.getWebServerSocketInfo(incomingRequest)
+		reqForWebServer = RequestHandler.prepareForWebServer(incomingRequest)
+		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+		s.settimeout(1000)
+		s.connect((webServer, port))
+		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
+		s.sendall(reqForWebServer)
+		while 1:
+			# receive data from web server
+			data = s.recv(2048)
+			# self.logHandler.log("Server sent response to proxy with headers:" + data.decode("ascii").rstrip("\r\n"))
+			if (len(data) > 0):
+				clientSocket.send(data) # send to browser/client
+				# self.logHandler.log("Proxy sent response to client with headers:" + data.decode("ascii").rstrip("\r\n"))
+			else:
+				break
+		
 
 def main():
 	server = ProxyServer()  

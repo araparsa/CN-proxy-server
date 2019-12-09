@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-06 19:43:54
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 14:02:10
+# @Last Modified time: 2019-12-08 23:11:21
 from datetime import datetime as time 
 
 class LogHandler():
@@ -17,14 +17,14 @@ class LogHandler():
 
 	def startLogging(self, config):
 		# print(config["logging"]["enable"], config["logging"]["logFile"])
-
-		if (not config["enable"]):
+		logConfig = config["logging"]
+		if (not logConfig["enable"]):
 			print("Logging is not enable, so there is not any log file for the server activities! set it to enable if you want to have log file.\n")
 			return 
 		else:
-			if (config["logFile"] != ""):
+			if (logConfig["logFile"] != ""):
 				print("log file exists already")
-				self.logFile = "./../files/" + config["logFile"]
+				self.logFile = "./../files/" + logConfig["logFile"]
 				
 			else:
 				print("creating log file...")
