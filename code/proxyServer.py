@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-04 14:51:12
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 19:42:46
+# @Last Modified time: 2019-12-12 18:49:40
 
 import socket
 import signal
@@ -11,6 +11,7 @@ import threading
 from handlers.requestHandler import RequestHandler
 from handlers.logHandler import LogHandler 
 from handlers.cacheHandler import CacheHandler 
+from handlers.privacyHandler import PrivacyHandler
 from parsers.httpParser import HttpParser
 
 CONFIG_FILE = "./../files/config.json"
@@ -24,6 +25,7 @@ class ProxyServer():
 		self.logHandler = LogHandler(self.config["logging"])
 		self.cache = []
 		self.cacheHandler = CacheHandler(self.config["caching"], self.cache)
+		self.privacyHandler = PrivacyHandler()
 		signal.signal(signal.SIGINT, self.shutdown)
 		
 		#Create a TCP socket
@@ -40,7 +42,6 @@ class ProxyServer():
 		
 		self.serverSocket.listen() # become a server socket
 		self.logHandler.log("Listening for incoming requests...\n")
-		# self.__clients = {}
 
 	def shutdown(self, event, frame):
 		self.serverSocket.close()
@@ -60,44 +61,108 @@ class ProxyServer():
 			d.setDaemon(True)
 			d.start()
 	
-	def sendReqToWebServer(self, request, clientSocket):
-		port, webServer = RequestHandler.getWebServerSocketInfo(request)
-		reqForWebServer = RequestHandler.prepareForWebServer(request)
-		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-		s.settimeout(1000)
-		s.connect((webServer, port))
-		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
-		s.sendall(reqForWebServer)
-		self.logHandler.log("Proxy sent request to server with headers:\n" + 
-				"\n".join(HttpParser.decode(reqForWebServer)).rstrip("\r\n"))
-		
+	def sendResponseToClient(self, response, clientSocket):
+		# print("in function")
+		dataHeader = HttpParser.getHeader(response)
+		self.logHandler.log("Proxy sent response to client with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
+		try:
+			clientSocket.sendall(response) # send to browser/client
+		except:
+			pass
+
+	def recieveDataFromWebServer(self, serverSocket):
 		while 1:
 			# receive data from web server
 			try:
-				data = s.recv(1024)
+				data = serverSocket.recv(2048)
 				if (len(data) > 0):
 					dataHeader = HttpParser.getHeader(data)
-					if dataHeader != None:
-						self.logHandler.log("Server sent response to proxy with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
-						self.cacheHandler.saveInCache(data, HttpParser.getUrl(data), HttpParser.noCache(dataHeader))
-						self.logHandler.log("Proxy sent response to client with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
-					clientSocket.send(data) # send to browser/client
+					self.logHandler.log("Server sent response to proxy with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
+					return data	
 				else:
 					break
 			except:
 				pass
-				
-	
+		return
+
+	def sendReqToWebServer(self, request, clientSocket):
+		print("sending to web server")
+		port, webServer = RequestHandler.getWebServerSocketInfo(request)
+		reqForWebServer = RequestHandler.prepareForWebServer(request)
+		# reqUrl = HttpParser.getUrl(request)
+		serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+		serverSocket.settimeout(1000)
+		serverSocket.connect((webServer, port))
+		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
+		serverSocket.sendall(reqForWebServer)
+		self.logHandler.log("Proxy sent request to server with headers:\n" + 
+				"\n".join(HttpParser.decode(reqForWebServer)).rstrip("\r\n"))		
+		return serverSocket			
+		
+	def checkFreshness(self, request, date):
+		print("in check")
+		print(date)
+		request = HttpParser.addIfModified(request, date)
+		print("after")
+		serverSocket = self.sendReqToWebServer(request)
+		serverResponse = self.recieveDataFromWebServer(serverSocket)
+		if (HttpParser.isModified(serverResponse)):
+			return serverResponse
+		else:
+			return None
+
 	def proxyThread(self, clientSocket, clientAddress):
 		# get the request from browser
+		print("in proxy thread!!")
 		try:
-			incomingRequest = clientSocket.recv(1024) 
+			incomingRequest = clientSocket.recv(2048) 
+			incomingRequest = self.privacyHandler.setPrivacy(self.config["privacy"], incomingRequest)
 			self.logHandler.log("Client sent request to proxy with headers:")
 			self.logHandler.log("connect to [] from localhost [] 58449\n")
 			self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
 					"\n----------------------------------------------------------------------\n")
+			isNoCache = HttpParser.noCache(incomingRequest)
+			if (isNoCache):
+				print("is nocache!!!")
+				serverSocket = self.sendReqToWebServer(incomingRequest, clientSocket)
+				data = self.recieveDataFromWebServer(serverSocket)
+				self.cacheHandler.saveInCache(HttpParser.getUrl(incomingRequest), data)
+				self.sendResponseToClient(data, clientSocket)
 
-			self.sendReqToWebServer(incomingRequest, clientSocket)
+			else:
+				# print(incomingRequest)
+				print("not pragma no cache")
+				cacheHit, cacheResponse = self.cacheHandler.checkInCache(HttpParser.getUrl(incomingRequest))
+				print(cacheHit)
+				print(cacheResponse)
+				# print(cacheResponse)
+				if (cacheHit): # cache item is fresh 
+					clientSocket.sendall(cacheResponse)
+				else:
+					if (cacheResponse == None): # not in cache
+						print("not in cache")
+						# print(incomingRequest)
+						serverSocket = self.sendReqToWebServer(incomingRequest, clientSocket)
+						# print("before data")
+						data = self.recieveDataFromWebServer(serverSocket)
+						print("after data")
+						# print(data)
+						# self.cacheHandler.saveInCache(HttpParser.getUrl(incomingRequest), data)
+						# print("after")
+						self.sendResponseToClient(data, clientSocket)
+						# print("after send")
+					else: # item in cache, check for freshness
+						print("in cache!!")
+						data = self.checkFreshness(incomingRequest, cacheResponse)
+						print("after data freshness")
+						if (data == None): # is fresh
+							print("is fresh")
+							self.sendResponseToClient(cacheResponse, clientSocket)
+							self.cacheHandler.hit(HttpParser.getUrl(incomingRequest), cacheResponse)
+						else: # not fresh
+							print("not fresh")
+							self.sendResponseToClient(data, clientSocket)
+							self.cacheHandler.hit(HttpParser.getUrl(incomingRequest), data)	
 		except:
 			pass 
 	

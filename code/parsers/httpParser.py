@@ -2,13 +2,14 @@
 # @Author: arman
 # @Date:   2019-12-09 13:49:10
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-09 19:35:15
+# @Last Modified time: 2019-12-12 19:12:48
+import datetime 
 
 class HttpParser:
 	"""docstring for HttpParser"""
 
 	def decode(message):
-		return (message.decode(errors="ignore").split('\n'))  
+		return (message.decode(errors="ignore").split('\n'))
 
 	def encode(lines):
 		return (str.encode("\n".join(lines)))
@@ -32,7 +33,9 @@ class HttpParser:
 	def getUrl(message):
 		messageLines = HttpParser.decode(message)
 		try:
-			return (messageLines[0].split(" ")[1]) #get url 
+			url= (messageLines[0].split(" ")[1]) #get url 
+			# print(message, url)
+			return (url)
 		except:
 			pass
 
@@ -72,6 +75,51 @@ class HttpParser:
 	def noCache(message):
 		messageLines = HttpParser.decode(message)
 		for line in messageLines:
+			# print(line)
 			if "Pragma: no-cache" in line:
+				print("pragma in header\n");
+				# print("---------------------")
 				return True
+		# print("---------------------")
 		return False
+
+	def getExpireDate(message):
+		messageLines = HttpParser.decode(message)
+		for line in messageLines:
+			if line[0:6] == "Expires":
+				dateStr = line[9:]
+				print(dateStr)
+				return(datetime.datetime.time.strptime(dateStr, "%a, %d %b %Y %H:%M:%S %Z"))
+		return ""
+
+	def addIfModified(message, date):
+		print("addifmodified")
+		messageLines = HttpParser.decode(message)
+		ifDateStr = "If-Modified-Since: " + date.strftime("%a, %d %b %Y %H:%M:%S %Z")
+		print("got date string ")
+		print(ifDateStr)
+		messageLines.insert(1, ifDateStr)
+		return HttpParser.encode(messageLines)
+
+	def isModified(message):
+		header = HttpParser.getHeader(message)
+		headerLines = HttpParser.decode()
+		if (headerLines[0].find("200")>0):
+			return True
+		elif (headerLines[0].find("304")>0):
+			return False
+		else:
+			return True
+
+	def getUserAgent(message):
+		messageLines = HttpParser.decode(message)
+		for i, line in enumerate(messageLines):
+			if len(line)>9 and line[0:10] == "User-Agent":
+				return line[12:], i
+
+	def replaceUserAgent(message, newAgent):
+		messageLines = HttpParser.decode(message)
+		oldAgent, i = HttpParser.getUserAgent(message)
+
+		messageLines[i] = messageLines[i].replace(oldAgent, newAgent)
+		return messageLines.encode()
