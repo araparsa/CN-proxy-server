@@ -1,5 +1,5 @@
 {
-  "port": 8080,
+  "port": 50080,
 
   "logging": {
     "enable": true,

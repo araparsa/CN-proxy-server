@@ -92,7 +92,7 @@ class ProxyServer():
 		reqForWebServer = RequestHandler.prepareForWebServer(request)
 		# reqUrl = HttpParser.getUrl(request)
 		serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-		serverSocket.settimeout(1000)
+		serverSocket.settimeout(10000)
 		serverSocket.connect((webServer, port))
 		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
 		serverSocket.sendall(reqForWebServer)
