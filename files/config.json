@@ -29,8 +29,9 @@
     "enable": true,
     	"targets": [
       	{
-        	"URL": "sib.ir",
-        	"type": "BLOCK"
+        	"URL": "www.bdood.ir",
+        	"type": "SLOW",
+          "delay": "5000"
      	  },
      	  {
         	"URL": "acm.ut.ac.ir",

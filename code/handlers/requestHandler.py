@@ -45,6 +45,9 @@ class RequestHandler:
 		request = HttpParser.removeHttpFromMessage(request)
 		# print(request)
 		# url = HttpParser.getUrl(request)
+		request = HttpParser.changeAcceptEncoding(request)
+
+		request = HttpParser.changeConnection(request)
 		# content = HttpParser.getContent(request)
 		request = HttpParser.replaceUrl(request)
 		# print(request)

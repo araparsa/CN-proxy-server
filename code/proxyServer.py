@@ -8,29 +8,33 @@ import socket
 import signal
 import json 
 import threading 
+import time
 from handlers.requestHandler import RequestHandler
 from handlers.logHandler import LogHandler 
 from handlers.cacheHandler import CacheHandler 
 from handlers.privacyHandler import PrivacyHandler
+from handlers.restrictionHandler import RestrictionHandler
 from parsers.httpParser import HttpParser
 
 CONFIG_FILE = "./../files/config.json"
-HOST_NAME = "0.0.0.0"
+HOST_NAME = "127.0.0.1"
 
 class ProxyServer():
 	"""docstring for ProxyServer"""
 	
 	def __init__(self):
 		self.parseConfigFile()
-		self.logHandler = LogHandler(self.config["logging"])
-		self.cache = []
-		self.cacheHandler = CacheHandler(self.config["caching"], self.cache)
+		# self.logHandler = LogHandler(self.config["logging"])
+		# self.cache = []
+		# self.cacheHandler = CacheHandler(self.config["caching"], self.cache)
 		self.privacyHandler = PrivacyHandler()
+		self.restrictionHandler = RestrictionHandler(self.config["restriction"])
 		signal.signal(signal.SIGINT, self.shutdown)
+		self.browserSemaphore = threading.Semaphore()
 		
 		#Create a TCP socket
 		self.serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		self.logHandler.log("Creating server socket...")
+		# self.logHandler.log("Creating server socket...")
 
 		# Re-use the socket
 		self.serverSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -38,10 +42,10 @@ class ProxyServer():
 		# bind the socket to local host, and a port   
 		# print(self.config['port'])
 		self.serverSocket.bind((HOST_NAME, self.config['port']))
-		self.logHandler.log("Binding socket to port " + str(self.config['port']) + "...")
+		# self.logHandler.log("Binding socket to port " + str(self.config['port']) + "...")
 		
 		self.serverSocket.listen() # become a server socket
-		self.logHandler.log("Listening for incoming requests...\n")
+		# self.logHandler.log("Listening for incoming requests...\n")
 
 	def shutdown(self, event, frame):
 		self.serverSocket.close()
@@ -55,7 +59,7 @@ class ProxyServer():
 		while True:
 			# Establish the connection
 			(clientSocket, clientAddress) = self.serverSocket.accept() 
-			self.logHandler.log("Accepted a request from client!")
+			# self.logHandler.log("Accepted a request from client!")
 			d = threading.Thread(name=clientAddress[0] + str(clientAddress[1]), 
 							target = self.proxyThread, args=(clientSocket, clientAddress))
 			d.setDaemon(True)
@@ -70,49 +74,54 @@ class ProxyServer():
 	# 	except:
 	# 		pass
 
-	# def recieveDataFromWebServer(self, serverSocket, clientSocket):
-	# 	while 1:
-	# 		# receive data from web server
-	# 		try:
-	# 			data = serverSocket.recv(2048)
-	# 			if (len(data) > 0):
-	# 				# dataHeader = HttpParser.getHeader(data)
-	# 				# self.logHandler.log("Server sent response to proxy with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
-	# 				clientSocket.sendall(data)
-	# 				# self.logHandler.log("proxy sent response to client with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
-	# 			else:
-	# 				break
-	# 		except:
-	# 			pass
-	# 	return
-
-	def sendReqToWebServer(self, request, clientSocket):
-		# print("sending to web server")
-		port, webServer = RequestHandler.getWebServerSocketInfo(request)
-		reqForWebServer = RequestHandler.prepareForWebServer(request)
-		# reqUrl = HttpParser.getUrl(request)
-		serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-		serverSocket.settimeout(10000)
-		serverSocket.connect((webServer, port))
-		self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
-		serverSocket.sendall(reqForWebServer)
-		self.logHandler.log("Proxy sent request to server with headers:\n" + 
-				"\n".join(HttpParser.decode(reqForWebServer)).rstrip("\r\n"))	
-
+	def sendDataFromWebServerToClient(self, serverSocket, clientSocket):
 		while 1:
 			# receive data from web server
 			try:
-				data = serverSocket.recv(2048)
+				data = serverSocket.recv(200000)
 				if (len(data) > 0):
 					# dataHeader = HttpParser.getHeader(data)
 					# self.logHandler.log("Server sent response to proxy with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
-					clientSocket.sendall(data)
+					self.browserSemaphore.acquire()
+					clientSocket.send(data)
 					# self.logHandler.log("proxy sent response to client with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
+					self.browserSemaphore.release()
 				else:
 					break
 			except:
 				pass
-		# return	
+		return
+
+	def sendReqToWebServer(self, request, clientSocket):
+		# print("sending to web server")
+		port, webServer = RequestHandler.getWebServerSocketInfo(request)
+		# print(webServer, port)
+		reqForWebServer = RequestHandler.prepareForWebServer(request)
+		# reqUrl = HttpParser.getUrl(request)
+		serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+		serverSocket.settimeout(10)
+		serverSocket.connect((webServer, port))
+		# self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
+		serverSocket.sendall(reqForWebServer)
+		# self.logHandler.log("Proxy sent request to server with headers:\n" + 
+				# "\n".join(HttpParser.decode(reqForWebServer)).rstrip("\r\n"))	
+
+		# while 1:
+		# 	# receive data from web server
+		# 	try:
+		# 		data = serverSocket.recv(200000)
+		# 		if (len(data) > 0):
+		# 			# dataHeader = HttpParser.getHeader(data)
+		# 			# self.logHandler.log("Server sent response to proxy with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
+		# 			self.browserSemaphore.acquire()
+		# 			clientSocket.send(data)
+		# 			# self.logHandler.log("proxy sent response to client with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
+		# 			self.browserSemaphore.release()
+		# 		else:
+		# 			break
+		# 	except:
+		# 		pass
+		# # return	
 		return serverSocket			
 		
 	def checkFreshness(self, request, date):
@@ -132,14 +141,25 @@ class ProxyServer():
 		# print("in proxy thread!!")
 		try:
 			# print("in try")
-			incomingRequest = clientSocket.recv(2048) 
-			print(incomingRequest)
+			incomingRequest = clientSocket.recv(200000) 
+			if(len(incomingRequest) <= 0):
+				return
+			# print(HttpParser.getHost(incomingRequest))
+			restriction = self.restrictionHandler.checkForRestriction(HttpParser.getHost(incomingRequest))
+			# print(restriction)
+			if restriction == -1:
+				return
+			elif restriction == 0:
+				pass
+			else:
+				time.sleep(restriction/1000)
+			# print(incomingRequest)
 			incomingRequest = self.privacyHandler.setPrivacy(self.config["privacy"], incomingRequest)
 			# print("hello")
-			self.logHandler.log("Client sent request to proxy with headers:")
-			self.logHandler.log("connect to [] from localhost [] 58449\n")
-			self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
-					"\n----------------------------------------------------------------------\n")
+			# self.logHandler.log("Client sent request to proxy with headers:")
+			# self.logHandler.log("connect to [] from localhost [] 58449\n")
+			# self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
+					# "\n----------------------------------------------------------------------\n")
 			# isNoCache = HttpParser.noCache(incomingRequest)
 			isNoCache = False
 			if (isNoCache):
@@ -166,7 +186,7 @@ class ProxyServer():
 						# print(incomingRequest)
 						serverSocket = self.sendReqToWebServer(incomingRequest, clientSocket)
 						# print("before data")
-						# data = self.recieveDataFromWebServer(serverSocket, clientSocket)
+						data = self.sendDataFromWebServerToClient(serverSocket, clientSocket)
 						# print("after data")
 						# print(data)
 						# self.cacheHandler.saveInCache(HttpParser.getUrl(incomingRequest), data)

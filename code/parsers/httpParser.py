@@ -30,6 +30,25 @@ class HttpParser:
 		messageLines[0] = messageLines[0].replace("HTTP/1.1", "HTTP/1.0") #change version of http
 		return (HttpParser.encode(messageLines))
 
+	def changeAcceptEncoding(message):
+		reqStr = HttpParser.decode(message)
+		for i in range(len(reqStr)) :
+			if reqStr[i].split(' ')[0] == 'Accept-Encoding:' :
+				reqStr[i] = 'Accept-Encoding: identity'
+				break
+		# reqStr = '\r\n'.join(reqStr)
+		return HttpParser.encode(reqStr)
+
+
+	def changeConnection(message):
+		reqStr = HttpParser.decode(message)
+		for i in range(len(reqStr)) :
+			if reqStr[i].split(' ')[0] == 'Connection:' :
+				reqStr[i] = 'Connection: Close'
+				break
+
+		return HttpParser.encode(reqStr)
+
 	def getUrl(message):
 		messageLines = HttpParser.decode(message)
 		try:
@@ -87,7 +106,7 @@ class HttpParser:
 		messageLines = HttpParser.decode(message)
 		for line in messageLines:
 			if line[0:6] == "Expires":
-				dateStr = line[9:]
+				dateStr = line[9:-1]
 				print(dateStr)
 				return(datetime.datetime.time.strptime(dateStr, "%a, %d %b %Y %H:%M:%S %Z"))
 		return ""
@@ -115,10 +134,16 @@ class HttpParser:
 		messageLines = HttpParser.decode(message)
 		for i, line in enumerate(messageLines):
 			if len(line)>9 and line[0:10] == "User-Agent":
-				return line[12:], i
+				return line[12:-1], i
 
 	def replaceUserAgent(message, newAgent):
 		messageLines = HttpParser.decode(message)
 		oldAgent, i = HttpParser.getUserAgent(message)
 		messageLines[i] = messageLines[i].replace(oldAgent, newAgent)
 		return HttpParser.encode(messageLines)
+
+	def getHost(message):
+		messageLines = HttpParser.decode(message)
+		for line in messageLines:
+			if line[0:4] == "Host":
+				return line[6:-1] 
