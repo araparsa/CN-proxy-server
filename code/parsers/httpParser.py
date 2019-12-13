@@ -120,6 +120,5 @@ class HttpParser:
 	def replaceUserAgent(message, newAgent):
 		messageLines = HttpParser.decode(message)
 		oldAgent, i = HttpParser.getUserAgent(message)
-
 		messageLines[i] = messageLines[i].replace(oldAgent, newAgent)
-		return messageLines.encode()
+		return HttpParser.encode(messageLines)
