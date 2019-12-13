@@ -14,6 +14,7 @@ from handlers.logHandler import LogHandler
 from handlers.cacheHandler import CacheHandler 
 from handlers.privacyHandler import PrivacyHandler
 from handlers.restrictionHandler import RestrictionHandler
+from handlers.accountingHandler import AccountingHandler
 from parsers.httpParser import HttpParser
 
 CONFIG_FILE = "./../files/config.json"
@@ -29,6 +30,7 @@ class ProxyServer():
 		# self.cacheHandler = CacheHandler(self.config["caching"], self.cache)
 		self.privacyHandler = PrivacyHandler()
 		self.restrictionHandler = RestrictionHandler(self.config["restriction"])
+		self.accountingHandler = AccountingHandler(self.config["accounting"])
 		signal.signal(signal.SIGINT, self.shutdown)
 		self.browserSemaphore = threading.Semaphore()
 		
@@ -58,7 +60,13 @@ class ProxyServer():
 	def handleIncomingRequests(self):
 		while True:
 			# Establish the connection
+			# print("hello")
 			(clientSocket, clientAddress) = self.serverSocket.accept() 
+			# print(clientAddress)
+			if(self.accountingHandler.hasCharge(clientAddress[0])):
+				pass
+			else:
+				continue
 			# self.logHandler.log("Accepted a request from client!")
 			d = threading.Thread(name=clientAddress[0] + str(clientAddress[1]), 
 							target = self.proxyThread, args=(clientSocket, clientAddress))
@@ -74,12 +82,14 @@ class ProxyServer():
 	# 	except:
 	# 		pass
 
-	def sendDataFromWebServerToClient(self, serverSocket, clientSocket):
+	def sendDataFromWebServerToClient(self, serverSocket, clientSocket, clientIP):
 		while 1:
 			# receive data from web server
 			try:
 				data = serverSocket.recv(200000)
 				if (len(data) > 0):
+					if(self.accountingHandler.hasEnoughCharge(clientIP, len(data)) == False):
+						break
 					# dataHeader = HttpParser.getHeader(data)
 					# self.logHandler.log("Server sent response to proxy with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
 					self.browserSemaphore.acquire()
@@ -141,12 +151,14 @@ class ProxyServer():
 		# print("in proxy thread!!")
 		try:
 			# print("in try")
+			# print(clientAddress)
 			incomingRequest = clientSocket.recv(200000) 
 			if(len(incomingRequest) <= 0):
 				return
 			# print(HttpParser.getHost(incomingRequest))
 			restriction = self.restrictionHandler.checkForRestriction(HttpParser.getHost(incomingRequest))
 			# print(restriction)
+			# print(clientAddress)
 			if restriction == -1:
 				return
 			elif restriction == 0:
@@ -186,7 +198,7 @@ class ProxyServer():
 						# print(incomingRequest)
 						serverSocket = self.sendReqToWebServer(incomingRequest, clientSocket)
 						# print("before data")
-						data = self.sendDataFromWebServerToClient(serverSocket, clientSocket)
+						data = self.sendDataFromWebServerToClient(serverSocket, clientSocket, clientAddress[0])
 						# print("after data")
 						# print(data)
 						# self.cacheHandler.saveInCache(HttpParser.getUrl(incomingRequest), data)
