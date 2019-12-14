@@ -2,13 +2,11 @@
 # @Author: arman
 # @Date:   2019-12-08 22:25:52
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-12 18:25:17
+# @Last Modified time: 2019-12-14 19:44:47
 
 import os 
-# from datetime import datetime as time
 from time import gmtime, mktime 
 from datetime import datetime
-# from logHandler import LogHandler
 from parsers.httpParser import HttpParser
 
 PATH = "./../cache/"

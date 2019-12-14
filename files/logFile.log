@@ -1,1502 +1,363 @@
-[13/Dec/2019:18:22:38] Proxy launched
-[13/Dec/2019:18:22:38] Creating server socket...
-[13/Dec/2019:18:22:38] Binding socket to port 50080...
-[13/Dec/2019:18:22:38] Listening for incoming requests...
+[14/Dec/2019:20:24:04] Proxy launched
+[14/Dec/2019:20:24:04] Creating server socket...
+[14/Dec/2019:20:24:04] Binding socket to port 8080...
+[14/Dec/2019:20:24:04] Listening for incoming requests...
 
-[13/Dec/2019:18:22:39] Accepted a request from client!
-[13/Dec/2019:18:22:39] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:39] connect to [] from localhost [] 58449
+[14/Dec/2019:20:24:07] Accepted a request from client!
+[14/Dec/2019:20:24:07] Client sent request to proxy with headers:
 
-[13/Dec/2019:18:22:39] 
-----------------------------------------------------------------------
-GET http://detectportal.firefox.com/success.txt HTTP/1.1
-Host: detectportal.firefox.com
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cache-Control: no-cache
-Pragma: no-cache
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:39] Proxy opening connection to server detectportal.firefox.com[ip-address]... Connection opened.
-[13/Dec/2019:18:22:39] Proxy sent request to server with headers:
-GET /success.txt HTTP/1.0
-Host: detectportal.firefox.com
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cache-Control: no-cache
-Pragma: no-cache
-Connection: keep-alive
-[13/Dec/2019:18:22:39] Accepted a request from client!
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:43] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:43] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:43] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/ HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
+[14/Dec/2019:20:24:07] Accepted a request from client!
+[14/Dec/2019:20:24:07] 
+=======================================================
+GET http://bdood.ir/ HTTP/1.1
+Host: bdood.ir
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
-----------------------------------------------------------------------
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+If-None-Match: "3b8218f3c27dd51:0"
+If-Modified-Since: Tue, 08 Oct 2019 10:27:13 GMT
+=======================================================
 
-[13/Dec/2019:18:22:43] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:43] Proxy sent request to server with headers:
-GET / HTTP/1.0
-Host: www.bdood.ir
+[14/Dec/2019:20:24:07] Accepted a request from client!
+[14/Dec/2019:20:24:07] Webpage is restricted! Proxy server restricted the connection with 5.0 seconds delay
+[14/Dec/2019:20:24:10] Accepted a request from client!
+[14/Dec/2019:20:24:10] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:10] 
+=======================================================
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+=======================================================
+
+[14/Dec/2019:20:24:10] Privacy set for the connection!
+[14/Dec/2019:20:24:10] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:10] Proxy opening connection to server www.google.com [172.217.18.100]... Connection opened.
+[14/Dec/2019:20:24:10]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:10] 
+=======================================================
+CONNECT / HTTP/1.0
+Host: www.google.com:443
 User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
+=======================================================
+
+[14/Dec/2019:20:24:11] Accepted a request from client!
+[14/Dec/2019:20:24:11] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:11] Accepted a request from client!
+[14/Dec/2019:20:24:11] 
+=======================================================
+GET http://acm.ut.ac.ir/ HTTP/1.1
+Host: acm.ut.ac.ir
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:43] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:43] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:43] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/grid.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:43] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:43] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:43] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/font-awesome.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:43] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:43] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:43] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/owl-carousel.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:43] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:43] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:43] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/google-map.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:43] Accepted a request from client!
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/mailform.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Accepted a request from client!
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/touch-touch.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Accepted a request from client!
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/grid.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/style.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Accepted a request from client!
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/rtl.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/font-awesome.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] Accepted a request from client!
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Accepted a request from client!
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery-migrate-1.2.1.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Accepted a request from client!
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/owl-carousel.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/device.min.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Client sent request to proxy with headers:
-[13/Dec/2019:18:22:44] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:22:44] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/script.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/google-map.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/mailform.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/touch-touch.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/style.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:44] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:44] Proxy sent request to server with headers:
-GET /css/rtl.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:45] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:45] Proxy sent request to server with headers:
-GET /js/jquery.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:45] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:45] Proxy sent request to server with headers:
-GET /js/jquery-migrate-1.2.1.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:45] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:45] Proxy sent request to server with headers:
-GET /js/device.min.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:22:45] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:22:45] Proxy sent request to server with headers:
-GET /js/script.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:23:45] Accepted a request from client!
-[13/Dec/2019:18:23:45] Client sent request to proxy with headers:
-[13/Dec/2019:18:23:45] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:23:45] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/animate.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/style.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:23:45] Accepted a request from client!
-[13/Dec/2019:18:23:45] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:23:45] Proxy sent request to server with headers:
-GET /css/animate.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/style.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:23:45] Client sent request to proxy with headers:
-[13/Dec/2019:18:23:45] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:23:45] 
-----------------------------------------------------------------------
-GET http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css HTTP/1.1
-Host: maxcdn.bootstrapcdn.com
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/style.css
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:23:45] Proxy opening connection to server maxcdn.bootstrapcdn.com[ip-address]... Connection opened.
-[13/Dec/2019:18:23:45] Proxy sent request to server with headers:
-GET /font-awesome/4.4.0/css/font-awesome.min.css HTTP/1.0
-Host: maxcdn.bootstrapcdn.com
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/style.css
-Connection: keep-alive
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:58] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:58] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:58] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:58] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/css/fontiran.css HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:58] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:58] Proxy sent request to server with headers:
-GET /css/fontiran.css HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/css,*/*;q=0.1
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:58] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:58] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/sibche-download2.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:58] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:58] Proxy sent request to server with headers:
-GET /images/sibche-download2.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:58] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:58] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:58] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/D-02-1.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:58] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/D-01-1.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/sol-and-poll-1.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/Iapps-Badge.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/D-02-1.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/slider.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/parkingsLocationButton.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/DL/apple.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/DL/bazar.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/D-01-1.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/sol-and-poll-1.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/DL/directDownload.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/bike.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/Iapps-Badge.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery.cookie.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery.easing.1.3.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/slider.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/parkingsLocationButton.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/tmstickup.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery.ui.totop.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/owl.carousel.min.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/DL/apple.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/DL/directDownload.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/DL/bazar.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery.rd-parallax.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/superfish.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/jquery.rd-navbar.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/wow.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /images/bike.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /js/jquery.cookie.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/js/persianNum.jquery.js HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /js/jquery.easing.1.3.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/03.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/01.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/02.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /js/tmstickup.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /js/jquery.ui.totop.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/1.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/2.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/3.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] Accepted a request from client!
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/star.svg HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:24:59] Proxy sent request to server with headers:
-GET /js/owl.carousel.min.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/fonts/iranYekan/woff2/iranyekanwebregular.woff2 HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: identity
-Referer: http://www.bdood.ir/css/fontiran.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:24:59] 
-----------------------------------------------------------------------
-GET http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.1
-Host: maxcdn.bootstrapcdn.com
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: identity
-Referer: http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
-Origin: http://www.bdood.ir
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:24:59] Client sent request to proxy with headers:
-[13/Dec/2019:18:24:59] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /js/jquery.rd-parallax.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /js/superfish.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /js/jquery.rd-navbar.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /js/wow.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /js/persianNum.jquery.js HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/03.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/01.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/02.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Accepted a request from client!
-[13/Dec/2019:18:25:00] Client sent request to proxy with headers:
-[13/Dec/2019:18:25:00] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/1.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/2.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/3.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Proxy sent request to server with headers:
-GET /images/star.svg HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/css/rtl.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:00] Accepted a request from client!
-[13/Dec/2019:18:25:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:25:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:25:01] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:25:01] Proxy sent request to server with headers:
-GET /fonts/iranYekan/woff2/iranyekanwebregular.woff2 HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: identity
-Referer: http://www.bdood.ir/css/fontiran.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:25:01] Proxy opening connection to server maxcdn.bootstrapcdn.com[ip-address]... Connection opened.
-[13/Dec/2019:18:25:01] Proxy sent request to server with headers:
-GET /font-awesome/4.4.0/fonts/fontawesome-webfont.woff2?v=4.4.0 HTTP/1.0
-Host: maxcdn.bootstrapcdn.com
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: identity
-Referer: http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
-Origin: http://www.bdood.ir
-Connection: keep-alive
-[13/Dec/2019:18:25:01] Accepted a request from client!
-[13/Dec/2019:18:25:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:25:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:25:01] Accepted a request from client!
-[13/Dec/2019:18:25:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:25:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:25:12] Accepted a request from client!
-[13/Dec/2019:18:25:12] Client sent request to proxy with headers:
-[13/Dec/2019:18:25:12] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:26:01] Accepted a request from client!
-[13/Dec/2019:18:26:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:26:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:26:01] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/fonts/iranYekan/woff/iranyekanwebregular.woff HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: identity
-Referer: http://www.bdood.ir/css/fontiran.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:26:01] Accepted a request from client!
-[13/Dec/2019:18:26:01] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:26:01] Proxy sent request to server with headers:
-GET /fonts/iranYekan/woff/iranyekanwebregular.woff HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: identity
-Referer: http://www.bdood.ir/css/fontiran.css
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:26:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:26:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:26:01] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/geo-pointer.png HTTP/1.1
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
-
-[13/Dec/2019:18:26:01] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:26:01] Proxy sent request to server with headers:
-GET /images/geo-pointer.png HTTP/1.0
-Host: www.bdood.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:26:01] Accepted a request from client!
-[13/Dec/2019:18:26:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:26:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:26:49] Accepted a request from client!
-[13/Dec/2019:18:26:49] Client sent request to proxy with headers:
-[13/Dec/2019:18:26:49] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:26:50] Accepted a request from client!
-[13/Dec/2019:18:26:50] Accepted a request from client!
-[13/Dec/2019:18:26:50] Client sent request to proxy with headers:
-[13/Dec/2019:18:26:50] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:26:50] 
-----------------------------------------------------------------------
-GET http://acm.ut.ac.ir/ HTTP/1.1
-Host: acm.ut.ac.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cookie: _ga=GA1.3.187142095.1554418636
-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
+
+[14/Dec/2019:20:24:11] Webpage is in black list! Proxy server blocked the connection!
+[14/Dec/2019:20:24:11] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:11] 
+=======================================================
+GET http://acm.ut.ac.ir/ HTTP/1.1
+Host: acm.ut.ac.ir
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
-----------------------------------------------------------------------
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
 
-[13/Dec/2019:18:26:50] Proxy opening connection to server acm.ut.ac.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:26:50] Proxy sent request to server with headers:
-GET / HTTP/1.0
-Host: acm.ut.ac.ir
-User-Agent: CN Proxy Server (v1.0.0)
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cookie: _ga=GA1.3.187142095.1554418636
-Connection: keep-alive
+[14/Dec/2019:20:24:11] Webpage is in black list! Proxy server blocked the connection!
+[14/Dec/2019:20:24:12] Privacy set for the connection!
+[14/Dec/2019:20:24:12] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:12] Proxy opening connection to server bdood.ir [82.99.223.115]... Connection opened.
+[14/Dec/2019:20:24:12]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+GET / HTTP/1.0
+Host: bdood.ir
+Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
-[13/Dec/2019:18:26:50] Client sent request to proxy with headers:
-[13/Dec/2019:18:26:50] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:27:01] Accepted a request from client!
-[13/Dec/2019:18:27:01] Client sent request to proxy with headers:
-[13/Dec/2019:18:27:01] connect to [] from localhost [] 58449
-
-[13/Dec/2019:18:27:01] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/bg-faq.png HTTP/1.1
-Host: www.bdood.ir
 User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: identity
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+If-None-Match: "3b8218f3c27dd51:0"
+If-Modified-Since: Tue, 08 Oct 2019 10:27:13 GMT
+=======================================================
 
-[13/Dec/2019:18:27:01] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:27:01] Proxy sent request to server with headers:
-GET /images/bg-faq.png HTTP/1.0
-Host: www.bdood.ir
+[14/Dec/2019:20:24:12] Server sent response to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+HTTP/1.1 304 Not Modified
+Accept-Ranges: bytes
+ETag: "3b8218f3c27dd51:0"
+Server: Microsoft-IIS/8.5
+Date: Sat, 14 Dec 2019 16:54:13 GMT
+Connection: close
+=======================================================
+
+[14/Dec/2019:20:24:12] Saving response in cache...
+[14/Dec/2019:20:24:12] Saving done!
+[14/Dec/2019:20:24:12] Accepted a request from client!
+[14/Dec/2019:20:24:12] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:12] Accepted a request from client!
+[14/Dec/2019:20:24:12] 
+=======================================================
+CONNECT unpkg.com:443 HTTP/1.1
+Host: unpkg.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+=======================================================
+
+[14/Dec/2019:20:24:12] Privacy set for the connection!
+[14/Dec/2019:20:24:12] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:12] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:12] 
+=======================================================
+GET http://acm.ut.ac.ir/ HTTP/1.1
+Host: acm.ut.ac.ir
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
+
+[14/Dec/2019:20:24:12] Webpage is in black list! Proxy server blocked the connection!
+[14/Dec/2019:20:24:12] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+GET http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css HTTP/1.1
+Host: maxcdn.bootstrapcdn.com
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://bdood.ir/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
+
+[14/Dec/2019:20:24:12] Privacy set for the connection!
+[14/Dec/2019:20:24:12] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:12] Proxy opening connection to server unpkg.com [104.16.126.175]... Connection opened.
+[14/Dec/2019:20:24:12]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+CONNECT / HTTP/1.0
+Host: unpkg.com:443
 User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Referer: http://www.bdood.ir/
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-[13/Dec/2019:18:27:21] Accepted a request from client!
-[13/Dec/2019:18:27:21] Client sent request to proxy with headers:
-[13/Dec/2019:18:27:21] connect to [] from localhost [] 58449
+=======================================================
 
-[13/Dec/2019:18:27:56] Accepted a request from client!
-[13/Dec/2019:18:27:56] Client sent request to proxy with headers:
-[13/Dec/2019:18:27:56] connect to [] from localhost [] 58449
+[14/Dec/2019:20:24:12] Proxy opening connection to server maxcdn.bootstrapcdn.com [209.197.3.15]... Connection opened.
+[14/Dec/2019:20:24:12]  Proxy sent request to server with headers:
 
-[13/Dec/2019:18:27:56] 
-----------------------------------------------------------------------
-GET http://www.bdood.ir/images/fav.ico HTTP/1.1
-Host: www.bdood.ir
+[14/Dec/2019:20:24:12] 
+=======================================================
+GET /font-awesome/4.4.0/css/font-awesome.min.css HTTP/1.0
+Host: maxcdn.bootstrapcdn.com
 User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
-----------------------------------------------------------------------
+Accept: text/css,*/*;q=0.1
+Referer: http://bdood.ir/
+Accept-Encoding: identity
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
 
-[13/Dec/2019:18:27:56] Proxy opening connection to server www.bdood.ir[ip-address]... Connection opened.
-[13/Dec/2019:18:27:56] Proxy sent request to server with headers:
-GET /images/fav.ico HTTP/1.0
-Host: www.bdood.ir
+[14/Dec/2019:20:24:12] Server sent response to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+HTTP/1.1 400 Bad Request
+Server: cloudflare
+Date: Sat, 14 Dec 2019 16:54:12 GMT
+Content-Type: text/html
+Content-Length: 253
+Connection: close
+CF-RAY: -
+=======================================================
+
+[14/Dec/2019:20:24:12] Saving response in cache...
+[14/Dec/2019:20:24:12] Saving done!
+[14/Dec/2019:20:24:12] Accepted a request from client!
+[14/Dec/2019:20:24:12] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+CONNECT unpkg.com:443 HTTP/1.1
+Host: unpkg.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+=======================================================
+
+[14/Dec/2019:20:24:12] Privacy set for the connection!
+[14/Dec/2019:20:24:12] Object is in cache. Checking for freshness...
+[14/Dec/2019:20:24:12] Server sent response to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+HTTP/1.1 200 OK
+Date: Sat, 14 Dec 2019 16:54:12 GMT
+Connection: Keep-Alive
+Accept-Ranges: bytes
+ETag: "1544639719"
+Expires: Sun, 13 Dec 2020 16:54:12 GMT
+Content-Length: 26711
+Content-Type: text/css; charset=utf-8
+Last-Modified: Wed, 12 Dec 2018 18:35:19 GMT
+X-Cache: HIT
+X-Hello-Human: Say hello back! @getBootstrapCDN on Twitter
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+timing-allow-origin: *
+cache-control: public, max-age=31536000
+=======================================================
+
+[14/Dec/2019:20:24:12] Proxy opening connection to server unpkg.com [104.16.123.175]... Connection opened.
+[14/Dec/2019:20:24:12]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+CONNECT / HTTP/1.0
+Host: unpkg.com:443
+If-Modified-Since: Sat, 14 Dec 2019 16:54:12 GMT
 User-Agent: CN Proxy Server (v1.0.0)
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cookie: _ga=GA1.2.960771647.1554423326; analytics_campaign={%22source%22:%22direct%22%2C%22medium%22:null}; analytics_token=d9b880b3-da43-d304-ebe4-874b20738919; yektanet_session_last_activity=12/13/2019; _gid=GA1.2.909361730.1576230039; analytics_session_token=ec8113c0-034a-4f25-b608-44814db9c9ab
-Connection: keep-alive
+=======================================================
+
+[14/Dec/2019:20:24:12] Server sent response to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+HTTP/1.1 400 Bad Request
+Server: cloudflare
+Date: Sat, 14 Dec 2019 16:54:12 GMT
+Content-Type: text/html
+Content-Length: 253
+Connection: close
+CF-RAY: -
+=======================================================
+
+[14/Dec/2019:20:24:12] Object is modified. Sending the new version from web server to client.
+[14/Dec/2019:20:24:12] Accepted a request from client!
+[14/Dec/2019:20:24:12] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+=======================================================
+
+[14/Dec/2019:20:24:12] Privacy set for the connection!
+[14/Dec/2019:20:24:12] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:12] Proxy opening connection to server www.google.com [172.217.18.100]... Connection opened.
+[14/Dec/2019:20:24:12]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:12] 
+=======================================================
+CONNECT / HTTP/1.0
+Host: www.google.com:443
+User-Agent: CN Proxy Server (v1.0.0)
+=======================================================
+
+[14/Dec/2019:20:24:22] Accepted a request from client!
+[14/Dec/2019:20:24:22] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:22] 
+=======================================================
+GET http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css HTTP/1.1
+Host: maxcdn.bootstrapcdn.com
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://bdood.ir/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
+
+[14/Dec/2019:20:24:22] Privacy set for the connection!
+[14/Dec/2019:20:24:22] Accepted a request from client!
+[14/Dec/2019:20:24:22] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:22] Client sent request to proxy with headers:
+
+[14/Dec/2019:20:24:22] 
+=======================================================
+CONNECT www.googletagmanager.com:443 HTTP/1.1
+Host: www.googletagmanager.com:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+=======================================================
+
+[14/Dec/2019:20:24:22] Privacy set for the connection!
+[14/Dec/2019:20:24:22] Object is not in cache. Forwarding the request to web server.
+[14/Dec/2019:20:24:22] Proxy opening connection to server www.googletagmanager.com [216.58.207.40]... Connection opened.
+[14/Dec/2019:20:24:22]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:22] 
+=======================================================
+CONNECT / HTTP/1.0
+Host: www.googletagmanager.com:443
+User-Agent: CN Proxy Server (v1.0.0)
+=======================================================
+
+[14/Dec/2019:20:24:22] Proxy opening connection to server maxcdn.bootstrapcdn.com [209.197.3.15]... Connection opened.
+[14/Dec/2019:20:24:22]  Proxy sent request to server with headers:
+
+[14/Dec/2019:20:24:22] 
+=======================================================
+GET /font-awesome/4.4.0/css/font-awesome.min.css HTTP/1.0
+Host: maxcdn.bootstrapcdn.com
+User-Agent: CN Proxy Server (v1.0.0)
+Accept: text/css,*/*;q=0.1
+Referer: http://bdood.ir/
+Accept-Encoding: identity
+Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,fa;q=0.7
+=======================================================
+
+[14/Dec/2019:20:24:22] Server sent response to proxy with headers:
+
+[14/Dec/2019:20:24:22] 
+=======================================================
+HTTP/1.1 200 OK
+Date: Sat, 14 Dec 2019 16:54:22 GMT
+Connection: Keep-Alive
+Accept-Ranges: bytes
+ETag: "1544639719"
+Expires: Sun, 13 Dec 2020 16:54:22 GMT
+Content-Length: 26711
+Content-Type: text/css; charset=utf-8
+Last-Modified: Wed, 12 Dec 2018 18:35:19 GMT
+X-Cache: HIT
+X-Hello-Human: Say hello back! @getBootstrapCDN on Twitter
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+timing-allow-origin: *
+cache-control: public, max-age=31536000
+=======================================================
+
+[14/Dec/2019:20:24:25] Proxy launched
+[14/Dec/2019:20:24:25] Creating server socket...
+[14/Dec/2019:20:24:25] Binding socket to port 8080...
+[14/Dec/2019:20:24:25] Listening for incoming requests...
+

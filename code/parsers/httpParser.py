@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-09 13:49:10
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-12 19:12:48
+# @Last Modified time: 2019-12-14 19:44:58
 import datetime 
 
 class HttpParser:
@@ -36,7 +36,6 @@ class HttpParser:
 			if reqStr[i].split(' ')[0] == 'Accept-Encoding:' :
 				reqStr[i] = 'Accept-Encoding: identity'
 				break
-		# reqStr = '\r\n'.join(reqStr)
 		return HttpParser.encode(reqStr)
 
 

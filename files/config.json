@@ -1,5 +1,5 @@
 {
-  "port": 50080,
+  "port": 8080,
 
   "logging": {
     "enable": true,
@@ -29,13 +29,13 @@
     "enable": true,
     	"targets": [
       	{
-        	"URL": "www.bdood.ir",
+        	"URL": "bdood.ir",
         	"type": "SLOW",
           "delay": "5000"
      	  },
      	  {
         	"URL": "acm.ut.ac.ir",
-        	"type": "SLOW",
+        	"type": "BLOCK",
         	"delay": "1000"
       	}
    		]

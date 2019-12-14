@@ -2,7 +2,7 @@
 # @Author: arman
 # @Date:   2019-12-04 14:51:12
 # @Last Modified by:   arman
-# @Last Modified time: 2019-12-12 18:49:40
+# @Last Modified time: 2019-12-14 19:53:50
 
 import socket
 import signal
@@ -25,7 +25,7 @@ class ProxyServer():
 	
 	def __init__(self):
 		self.parseConfigFile()
-		# self.logHandler = LogHandler(self.config["logging"])
+		self.logHandler = LogHandler(self.config["logging"])
 		self.cacheHandler = CacheHandler(self.config["caching"])
 		self.privacyHandler = PrivacyHandler(self.config["privacy"])
 		self.restrictionHandler = RestrictionHandler(self.config["restriction"])
@@ -35,17 +35,16 @@ class ProxyServer():
 		
 		#Create a TCP socket
 		self.serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		# self.logHandler.log("Creating server socket...")
+		self.logHandler.logCreateSocket()
 
 		# Re-use the socket
 		self.serverSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 		# bind the socket to local host, and a port
 		self.serverSocket.bind((HOST_NAME, self.config['port']))
-		# self.logHandler.log("Binding socket to port " + str(self.config['port']) + "...")
-		
+		self.logHandler.logBindSocket(self.config['port'])
 		self.serverSocket.listen() # become a server socket
-		# self.logHandler.log("Listening for incoming requests...\n")
+		self.logHandler.logListen()
 
 	def shutdown(self, event, frame):
 		self.serverSocket.close()
@@ -57,20 +56,19 @@ class ProxyServer():
 
 	def handleIncomingRequests(self):
 		while True:
-			# Establish the connection
 			(clientSocket, clientAddress) = self.serverSocket.accept() 
+			self.logHandler.logAcceptClientRequest()
 			if(self.accountingHandler.hasCharge(clientAddress[0])):
 				pass
 			else:
 				continue
-			# self.logHandler.log("Accepted a request from client!")
 			d = threading.Thread(name=clientAddress[0] + str(clientAddress[1]), 
 							target = self.proxyThread, args=(clientSocket, clientAddress))
 			d.setDaemon(True)
 			d.start()
 	
 	def sendResponseToClient(self, response, clientSocket):
-		# self.logHandler.log("Proxy sent response to client with headers:\n" + dataHeader.decode(errors="ignore").rstrip("\r\n"))
+		self.logHandler.logProxySendDataToClient(response)
 		for item in response:
 			clientSocket.send(item)
 
@@ -82,7 +80,9 @@ class ProxyServer():
 			data = serverSocket.recv(200000)
 			if (len(data) > 0):
 				if(self.accountingHandler.hasEnoughCharge(clientIP, len(data)) == False):
+					self.logHandler.logBlockSendingDataToOutOfChargeClient()
 					return None
+				self.logHandler.logRecieveDataFromWebServer(data)
 				fullData.append(data)
 			else:
 				break
@@ -94,18 +94,17 @@ class ProxyServer():
 		serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 		serverSocket.settimeout(10)
 		serverSocket.connect((webServer, port))
-		# self.logHandler.log("Proxy opening connection to server " + webServer + "[ip-address]" + "... Connection opened.")
+		serverIp = socket.gethostbyname(webServer)
+		self.logHandler.logOpenConnectionToWebServer(webServer, serverIp)
 		serverSocket.sendall(reqForWebServer)
-		# self.logHandler.log("Proxy sent request to server with headers:\n" + 
-				# "\n".join(HttpParser.decode(reqForWebServer)).rstrip("\r\n"))	
+		self.logHandler.logProxySentRequestToWebServer(reqForWebServer)
 
 		return serverSocket			
 		
 	def checkFreshness(self, request, date, clientIP):
+
 		request = HttpParser.addIfModified(request, date)
-
 		serverSocket = self.sendReqToWebServer(request)
-
 		response = self.getResponseFromServer(serverSocket, clientIP)
 		if(response == [] or response == None): #empty response or not enouph charge
 			return ""
@@ -119,25 +118,35 @@ class ProxyServer():
 		cacheHit, cacheResponse, cacheDate = self.cacheHandler.checkInCache(HttpParser.getUrl(incomingRequest))
 
 		if (cacheHit): # cache item is fresh 
+			self.logHandler.logCacheIsFresh()
 			self.sendResponseToClient(cacheResponse, clientSocket)
+			self.logHandler.logSendFromCache()
 		else:
 			if (cacheResponse == None): # not in cache
+				self.logHandler.logNotInCache()
 				serverSocket = self.sendReqToWebServer(incomingRequest)
 
 				response = self.getResponseFromServer(serverSocket, clientAddress[0])
-				if(response == [] or response == None): #empty response or not enouph charge
+				isNoCache = HttpParser.noCache(HttpParser.getHeader(response[0]))
+				if(not isNoCache): # pragma no cache in response header
+					self.logHandler.logSaveInCache()
+					self.cacheHandler.saveInCache(HttpParser.getUrl(incomingRequest), response)
+					self.logHandler.logSaveDone()
+					
+				if(response == [] or response == None): #empty response or not enough charge
 					return
 				else:
 					self.sendResponseToClient(response, clientSocket)
 
-				isNoCache = HttpParser.noCache(HttpParser.getHeader(response[0]))
-				if(not isNoCache): # pragma no cache in response header
-					self.cacheHandler.saveInCache(HttpParser.getUrl(incomingRequest), response)
+				
 
 			else: # item in cache, check for freshness
+				self.logHandler.logCheckForFreshness()
 				response = self.checkFreshness(incomingRequest, cacheDate, clientAddress[0])
 
 				if (response == None): # is fresh
+					self.logHandler.logCacheIsFresh()
+					self.logHandler.logSendFromCache()
 					self.sendResponseToClient(cacheResponse, clientSocket)
 					self.cacheHandler.hit(HttpParser.getUrl(incomingRequest), cacheResponse)
 
@@ -145,6 +154,7 @@ class ProxyServer():
 					return
 
 				else: # not fresh
+					self.logHandler.logModified()
 					self.sendResponseToClient(response, clientSocket)
 					self.cacheHandler.hit(HttpParser.getUrl(incomingRequest), response)	
 
@@ -154,8 +164,10 @@ class ProxyServer():
 			incomingRequest = clientSocket.recv(200000) 
 			if(len(incomingRequest) <= 0):
 				return
+			self.logHandler.logClientRequestToProxy(incomingRequest)
 
 			restriction = self.restrictionHandler.checkForRestriction(HttpParser.getHost(incomingRequest))
+			self.logHandler.logRestriction(restriction)
 			if restriction == -1:
 				return
 			elif restriction == 0:
@@ -164,12 +176,9 @@ class ProxyServer():
 				time.sleep(restriction/1000)
 
 			incomingRequest = self.privacyHandler.setPrivacy(incomingRequest)
-
+			self.logHandler.logPrivacy()
 			self.handleRequest(clientSocket, clientAddress, incomingRequest)
-			# self.logHandler.log("Client sent request to proxy with headers:")
-			# self.logHandler.log("connect to [] from localhost [] 58449\n")
-			# self.logHandler.log("\n----------------------------------------------------------------------\n" + incomingRequest.decode("utf-8").rstrip("\r\n") + 
-					# "\n----------------------------------------------------------------------\n")
+
 		except:
 			pass 
 	
