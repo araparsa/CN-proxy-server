@@ -12,15 +12,12 @@ from datetime import datetime
 from parsers.httpParser import HttpParser
 
 PATH = "./../cache/"
-# _TIME = 0
-# _KEY = 1
-# _RESPONSE = 2
 
 class CacheHandler():
 	"""docstring for CacheHandler"""
-	def __init__(self, config, cache):
+	def __init__(self, config):
 		self.setParams(config)
-		self.cache = cache
+		self.cache = []
 
 	def setParams(self, config):
 		self.cacheEnable = False
@@ -34,48 +31,40 @@ class CacheHandler():
 			if item.key == key:
 				index = i 
 				break
-		self.cache.remove(index)
+		del self.cache[i]
 
 	def saveNewMessage(self, key, message):	
 		gmtDatetime = datetime.fromtimestamp(mktime(gmtime()))
-		item = cacheItem(key, gmtDatetime, HttpParser.getExpireDate(HttpParser.getHeader(message)), message)
-		self.cache.append(item)		
+		item = cacheItem(key, gmtDatetime, HttpParser.getExpireDate(HttpParser.getHeader(message[0])), message)
+		self.cache.append(item)	
 	
 	def LRUReplace(self, key, message):
-		
-		self.cache.remove(0)
+		del self.cache[0]		
 		self.saveNewMessage(key, message)
 
 	def saveInCache(self, key, message):
-
 		if(not self.cacheEnable):
 			return 
 
-		if (len(self.cache) < 200):
+		if (len(self.cache) < self.cacheSize):
 			self.saveNewMessage(key, message)
 		else:
 			self.LRUReplace(key, message)
-		
-		# print(len(self.cache))
 
-	def hit(self, key, message):
+
+	def hit(self, key, response):
 		self.remove(key)
-		self.saveNewMessage(self, key, message)
+		isNoCache = HttpParser.noCache(HttpParser.getHeader(response[0]))
+		if(not isNoCache): # pragma no cache in response header
+			self.saveNewMessage(self, key, response)
 
 	def checkInCache(self, key):
-		print("check in cache " + key)
 		for i, item in enumerate(self.cache):
-			print(i)
 			if(item.key == key):
-				print("exp date")
-				print(item.expireDate)
-				if (item.expireDate != "" and item.expireDate < gmtime()):
-					print("r here")
-					return True, item.content
-				print("r heree")
-				return False, item.saveDate
-		print("r hereee")
-		return False, None
+				if (item.expireDate != "" and item.expireDate > datetime.fromtimestamp(mktime(gmtime()))):
+					return True, item.content, None
+				return False, item.content, item.saveDate
+		return False, None, None
 	
 class cacheItem():
 	"""docstring for cacheItem"""

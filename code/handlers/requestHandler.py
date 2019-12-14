@@ -6,11 +6,6 @@
 from parsers.httpParser import HttpParser 
 
 class RequestHandler:
-	# def __init__(self, request):
-	# 	self.requestLines = request.decode("utf-8").split('\n')  
-
-	# def joinRequest(self):
-	# 	return "\n".join(self.requestLines)
 
 	def getWebServerSocketInfo(request):
 		url = HttpParser.getUrl(request)
@@ -19,7 +14,7 @@ class RequestHandler:
 			temp = url
 		else:
 			temp = url[(http_pos+3):] # get the rest of url
-		# print(self.requestLines)
+
 		port_pos = temp.find(":") # find the port pos (if any)
 
 		# find end of web server
@@ -39,18 +34,11 @@ class RequestHandler:
 		return port, webserver 
 
 	def prepareForWebServer(request):
-		# print(request)
 		request = HttpParser.changeHttpVersion(request)
-		# print(request)
 		request = HttpParser.removeHttpFromMessage(request)
-		# print(request)
-		# url = HttpParser.getUrl(request)
 		request = HttpParser.changeAcceptEncoding(request)
-
 		request = HttpParser.changeConnection(request)
-		# content = HttpParser.getContent(request)
 		request = HttpParser.replaceUrl(request)
-		# print(request)
 		request = HttpParser.removeProxyHeader(request)
-		# print(request)
+
 		return request 

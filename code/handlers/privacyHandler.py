@@ -7,8 +7,10 @@ from parsers.httpParser import HttpParser
 
 class PrivacyHandler():
 	"""docstring for PrivacyHandler"""
+	def __init__(self, config):
+		self.config = config
 	
-	def setPrivacy(self, config, request):
-		if (config["enable"] == False):
+	def setPrivacy(self, request):
+		if (self.config["enable"] == False):
 			return request
-		return HttpParser.replaceUserAgent(request, config["userAgent"])	
+		return HttpParser.replaceUserAgent(request, self.config["userAgent"])	

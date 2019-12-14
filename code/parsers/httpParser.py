@@ -53,7 +53,6 @@ class HttpParser:
 		messageLines = HttpParser.decode(message)
 		try:
 			url= (messageLines[0].split(" ")[1]) #get url 
-			# print(message, url)
 			return (url)
 		except:
 			pass
@@ -94,35 +93,28 @@ class HttpParser:
 	def noCache(message):
 		messageLines = HttpParser.decode(message)
 		for line in messageLines:
-			# print(line)
 			if "Pragma: no-cache" in line:
-				print("pragma in header\n");
-				# print("---------------------")
 				return True
-		# print("---------------------")
 		return False
 
 	def getExpireDate(message):
 		messageLines = HttpParser.decode(message)
 		for line in messageLines:
-			if line[0:6] == "Expires":
+			if line[0:7] == "Expires":
 				dateStr = line[9:-1]
-				print(dateStr)
-				return(datetime.datetime.time.strptime(dateStr, "%a, %d %b %Y %H:%M:%S %Z"))
+				date = datetime.datetime.strptime(dateStr, "%a, %d %b %Y %H:%M:%S %Z")
+				return(date)
 		return ""
 
 	def addIfModified(message, date):
-		print("addifmodified")
 		messageLines = HttpParser.decode(message)
-		ifDateStr = "If-Modified-Since: " + date.strftime("%a, %d %b %Y %H:%M:%S %Z")
-		print("got date string ")
-		print(ifDateStr)
-		messageLines.insert(1, ifDateStr)
+		ifDateStr = "If-Modified-Since: " + date.strftime("%a, %d %b %Y %H:%M:%S ") + "GMT\r"
+		messageLines.insert(2, ifDateStr)
 		return HttpParser.encode(messageLines)
 
 	def isModified(message):
 		header = HttpParser.getHeader(message)
-		headerLines = HttpParser.decode()
+		headerLines = HttpParser.decode(header)
 		if (headerLines[0].find("200")>0):
 			return True
 		elif (headerLines[0].find("304")>0):

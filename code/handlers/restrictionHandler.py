@@ -10,9 +10,7 @@ class RestrictionHandler():
 
 	def checkForRestriction(self, host):
 		for item in self.restrictedHosts:
-			# print(host, item["URL"])
 			if host == item["URL"]:
-				# print("host is restricted")
 				if item["type"] == "BLOCK":
 					return -1
 				else:

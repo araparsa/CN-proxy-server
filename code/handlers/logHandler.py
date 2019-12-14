@@ -16,7 +16,6 @@ class LogHandler():
 		f.close()
 
 	def startLogging(self, config):
-		# print(config["logging"]["enable"], config["logging"]["logFile"])
 
 		if (not config["enable"]):
 			print("Logging is not enable, so there is not any log file for the server activities! set it to enable if you want to have log file.\n")
